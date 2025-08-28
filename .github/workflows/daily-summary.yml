@@ -1,0 +1,91 @@
+name: Daily Commit and PR Summary
+
+on:
+  schedule:
+    - cron: '0 18 * * *' # Runs every day at 18:00 UTC
+  workflow_dispatch:
+
+jobs:
+  summary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+      - name: Generate Commit and PR Summary
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { Octokit } = require("@octokit/core");
+            const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+            const today = new Date();
+            today.setUTCHours(0,0,0,0);
+            const since = today.toISOString();
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            // Get today's commits on main and development
+            let commits = [];
+            for (const branch of ["main", "development"]) {
+              const { data } = await octokit.request(
+                'GET /repos/{owner}/{repo}/commits',
+                { owner, repo, sha: branch, since }
+              );
+              for (const commit of data) {
+                commits.push({
+                  branch,
+                  sha: commit.sha,
+                  author: commit.commit.author.name,
+                  message: commit.commit.message,
+                  url: commit.html_url,
+                  date: commit.commit.author.date,
+                });
+              }
+            }
+
+            // Get today's PRs merged
+            const { data: prs } = await octokit.request(
+              'GET /repos/{owner}/{repo}/pulls',
+              { owner, repo, state: 'closed', sort: 'updated', direction: 'desc', per_page: 100 }
+            );
+            const mergedToday = prs.filter(pr =>
+              pr.merged_at && new Date(pr.merged_at) >= today
+            ).map(pr => ({
+              number: pr.number,
+              title: pr.title,
+              user: pr.user.login,
+              url: pr.html_url,
+              merged_at: pr.merged_at,
+            }));
+
+            let summary = `## Daily Commit and PR Summary\n\n### Commits\n`;
+            if (commits.length === 0) {
+              summary += "No commits today.\n";
+            } else {
+              for (const c of commits) {
+                summary += `- [\`${c.sha.substring(0,7)}\`](${c.url}) on \`${c.branch}\`: ${c.message} by ${c.author} at ${c.date}\n`;
+              }
+            }
+            summary += `\n### Merged Pull Requests\n`;
+            if (mergedToday.length === 0) {
+              summary += "No PRs merged today.\n";
+            } else {
+              for (const pr of mergedToday) {
+                summary += `- [#${pr.number}](${pr.url}): ${pr.title} by @${pr.user} at ${pr.merged_at}\n`;
+              }
+            }
+
+            // Output to workflow summary
+            core.summary.addRaw(summary).write();
+
+            // Optionally create an issue (uncomment to enable)
+            /*
+            await octokit.request(
+              'POST /repos/{owner}/{repo}/issues',
+              {
+                owner, repo,
+                title: `Daily Summary for ${today.toISOString().slice(0,10)}`,
+                body: summary
+              }
+            );
+            */
