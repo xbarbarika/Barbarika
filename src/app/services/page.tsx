@@ -352,7 +352,7 @@ export default function ServicesPage() {
         "Smart contract development (Solidity, Rust)",
         "dApp & token infrastructure",
         "NFT platforms, wallets & DAO integrations",
-        "Audits, testing, and post-launch support"
+        "Audits, testing and post-launch support"
       ]
     },
     {
