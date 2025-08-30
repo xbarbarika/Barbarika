@@ -194,15 +194,15 @@ const AIBlogPage = () => {
             <div className="max-w-6xl mx-auto text-center">
               <button
                 onClick={() => router.push('/company-file/blog')}
-                className="mb-8 flex items-center text-blue-400 hover:text-blue-300 transition-colors mx-auto"
+                className="mb-8 flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors mx-auto"
               >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
                 Back to Blog
               </button>
               
-              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight px-2" style={{
+              <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 sm:mb-10 leading-tight px-2" style={{
                 fontFamily: 'var(--font-tourney), sans-serif',
                 background: 'linear-gradient(90deg, #3B82F6 0%, #EF4444 100%)',
                 WebkitBackgroundClip: 'text',
@@ -216,7 +216,7 @@ const AIBlogPage = () => {
               }}>
                 AI + Blockchain Series
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 max-w-4xl mx-auto mb-8 sm:mb-12 px-2 sm:px-4" style={{
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 max-w-4xl mx-auto mb-10 sm:mb-14 px-2 sm:px-4" style={{
                 fontFamily: 'var(--font-dm-sans), sans-serif',
                 lineHeight: '1.6'
               }}>
@@ -247,26 +247,26 @@ const AIBlogPage = () => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full backdrop-blur-sm text-blue-300 bg-blue-900/50">
+                    <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full backdrop-blur-sm text-blue-300 bg-blue-900/50">
                       {blog.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6 relative z-10">
-                  <div className="flex items-center text-sm text-gray-400 mb-2">
+                  <div className="flex items-center text-base text-gray-400 mb-3">
                     <span className="group-hover:text-blue-300 transition-colors">{blog.date}</span>
                     <span className="mx-2">•</span>
-                    <span className="text-sm text-gray-300">{blog.readTime}</span>
+                    <span className="text-base text-gray-300">{blog.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-400 mb-4 group-hover:text-gray-200 transition-colors line-clamp-3">
+                  <p className="text-lg text-gray-400 mb-5 group-hover:text-gray-200 transition-colors line-clamp-3">
                     {blog.excerpt}
                   </p>
-                  <div className="flex items-center text-sm text-blue-400 group-hover:text-blue-300 transition-colors">
+                  <div className="flex items-center text-base text-blue-400 group-hover:text-blue-300 transition-colors">
                     <span>Read more</span>
-                    <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>

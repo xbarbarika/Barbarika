@@ -25,9 +25,9 @@ const BlogPost = () => {
           {/* Back Button */}
           <button
             onClick={() => router.push('/company-file/blog/ai')}
-            className="mb-8 flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+            className="mb-8 flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
           >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to AI + Blockchain Series
@@ -47,8 +47,8 @@ const BlogPost = () => {
 
           {/* Article Header */}
           <div className="mb-8">
-            <div className="flex items-center text-sm text-gray-400 mb-4">
-              <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-900/50 text-blue-300 mr-4">
+            <div className="flex items-center text-base text-gray-400 mb-6">
+              <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-blue-900/50 text-blue-300 mr-4">
                 Technology
               </span>
               <span>Aug 20, 2025</span>
@@ -58,7 +58,7 @@ const BlogPost = () => {
               <span>Barbarika Labs</span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight" style={{
               fontFamily: 'var(--font-tourney), sans-serif',
               background: 'linear-gradient(90deg, #3B82F6 0%, #EF4444 100%)',
               WebkitBackgroundClip: 'text',
@@ -70,12 +70,12 @@ const BlogPost = () => {
 
           {/* Article Content */}
           <article className="prose prose-lg prose-invert max-w-none">
-            <div className="text-gray-300 leading-relaxed space-y-6" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
-              <p className="text-xl text-gray-200 font-medium mb-8">
+            <div className="text-gray-300 leading-relaxed space-y-8 text-lg" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+              <p className="text-2xl text-gray-200 font-medium mb-10">
                 Reflecting on our journey and preparing for the final publication.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">📝 Taking Stock of Our Journey</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">📝 Taking Stock of Our Journey</h2>
               
               <p>
                 We&apos;ve covered an incredible amount of ground in our AI + Blockchain series! Today 
@@ -83,7 +83,7 @@ const BlogPost = () => {
                 take a moment to appreciate how far we&apos;ve come and what we&apos;ve accomplished together.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🎯 What We&apos;ve Accomplished</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🎯 What We&apos;ve Accomplished</h2>
               
               <div className="space-y-6 my-8">
                 <div className="bg-blue-900/20 border-l-4 border-blue-500 pl-6 py-4">
@@ -119,7 +119,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">📊 Series Statistics</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">📊 Series Statistics</h2>
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
@@ -163,7 +163,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🔍 Review and Quality Check</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🔍 Review and Quality Check</h2>
               
               <p>
                 Before we publish our final piece, let&apos;s ensure everything meets our quality standards:
@@ -195,7 +195,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🎉 Celebrating Our Achievement</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🎉 Celebrating Our Achievement</h2>
               
               <p>
                 Creating a comprehensive 15-day series on AI + Blockchain is no small feat! 
@@ -212,7 +212,7 @@ const BlogPost = () => {
                 <li><strong>Practical Guidance:</strong> Actionable advice for implementation</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🚀 What&apos;s Next?</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🚀 What&apos;s Next?</h2>
               
               <p>
                 Tomorrow marks our final day - the culmination of this incredible journey. 
@@ -229,7 +229,7 @@ const BlogPost = () => {
                 </p>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">💭 Reflection Questions</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">💭 Reflection Questions</h2>
               
               <p>
                 As we prepare for our final day, take a moment to reflect:
@@ -258,7 +258,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🌟 Thank You for the Journey</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🌟 Thank You for the Journey</h2>
               
               <p>
                 Creating this series has been an incredible experience. We&apos;ve covered complex 
@@ -287,22 +287,22 @@ const BlogPost = () => {
           </article>
 
           {/* Navigation */}
-          <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-800">
+          <div className="flex justify-between items-center mt-16 pt-10 border-t border-gray-800">
             <button
               onClick={() => router.push('/company-file/blog/ai/interviews-expert-opinions')}
-              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+              className="flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               Previous: Day 13 - Interviews or Expert Opinions
             </button>
             <button
               onClick={() => router.push('/company-file/blog/ai/final-polish-publish')}
-              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+              className="flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
             >
               Next: Day 15 - Final Polish and Publish!
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>

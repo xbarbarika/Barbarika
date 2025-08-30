@@ -58,7 +58,7 @@ const BlogPost = () => {
               <span>Barbarika Labs</span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight" style={{
               fontFamily: 'var(--font-tourney), sans-serif',
               background: 'linear-gradient(90deg, #3B82F6 0%, #EF4444 100%)',
               WebkitBackgroundClip: 'text',
@@ -71,7 +71,7 @@ const BlogPost = () => {
           {/* Article Content */}
           <article className="prose prose-lg prose-invert max-w-none">
             <div className="text-gray-300 leading-relaxed space-y-6" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
-              <p className="text-xl text-gray-200 font-medium mb-8">
+              <p className="text-2xl text-gray-200 font-medium mb-10">
                 What is AI? Hey there, curious mind! Today, let&apos;s explore Artificial Intelligence (AI) using a warm, natural story.
               </p>
 

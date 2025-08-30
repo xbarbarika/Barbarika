@@ -25,9 +25,9 @@ const BlogPost = () => {
           {/* Back Button */}
           <button
             onClick={() => router.push('/company-file/blog/ai')}
-            className="mb-8 flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+            className="mb-8 flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
           >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to AI + Blockchain Series
@@ -47,8 +47,8 @@ const BlogPost = () => {
 
           {/* Article Header */}
           <div className="mb-8">
-            <div className="flex items-center text-sm text-gray-400 mb-4">
-              <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-900/50 text-blue-300 mr-4">
+            <div className="flex items-center text-base text-gray-400 mb-6">
+              <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-blue-900/50 text-blue-300 mr-4">
                 Technology
               </span>
               <span>Aug 14, 2025</span>
@@ -58,7 +58,7 @@ const BlogPost = () => {
               <span>Barbarika Labs</span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight" style={{
               fontFamily: 'var(--font-tourney), sans-serif',
               background: 'linear-gradient(90deg, #3B82F6 0%, #EF4444 100%)',
               WebkitBackgroundClip: 'text',
@@ -70,19 +70,19 @@ const BlogPost = () => {
 
           {/* Article Content */}
           <article className="prose prose-lg prose-invert max-w-none">
-            <div className="text-gray-300 leading-relaxed space-y-6" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
-              <p className="text-xl text-gray-200 font-medium mb-8">
+            <div className="text-gray-300 leading-relaxed space-y-8 text-lg" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+              <p className="text-2xl text-gray-200 font-medium mb-10">
                 Stay updated with the latest breakthroughs and industry updates.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🚀 Breaking News in AI + Blockchain</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🚀 Breaking News in AI + Blockchain</h2>
               
               <p>
                 The AI + Blockchain space is moving at lightning speed! Let&apos;s catch up on the latest 
                 developments that are shaping the future of these technologies.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🔬 Major Breakthroughs</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🔬 Major Breakthroughs</h2>
               
               <div className="space-y-6 my-8">
                 <div className="bg-blue-900/20 border-l-4 border-blue-500 pl-6 py-4">
@@ -110,7 +110,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🏢 Corporate Adoption News</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🏢 Corporate Adoption News</h2>
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
@@ -146,7 +146,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🌍 Government and Regulatory Updates</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🌍 Government and Regulatory Updates</h2>
               
               <div className="space-y-4 my-8">
                 <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-lg p-6">
@@ -174,7 +174,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">📊 Investment and Market Trends</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">📊 Investment and Market Trends</h2>
               
               <p>
                 The market is showing strong growth and investor confidence:
@@ -188,7 +188,7 @@ const BlogPost = () => {
                 <li><strong>180+ countries</strong> with active AI + Blockchain projects</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🔮 What&apos;s Coming Next</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🔮 What&apos;s Coming Next</h2>
               
               <p>
                 Based on current trends, we can expect:
@@ -217,22 +217,22 @@ const BlogPost = () => {
           </article>
 
           {/* Navigation */}
-          <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-800">
+          <div className="flex justify-between items-center mt-16 pt-10 border-t border-gray-800">
             <button
               onClick={() => router.push('/company-file/blog/ai/challenges-limitations')}
-              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+              className="flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               Previous: Day 7 - Challenges and Limitations
             </button>
             <button
               onClick={() => router.push('/company-file/blog/ai/future-trends')}
-              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+              className="flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
             >
               Next: Day 9 - Future Trends
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>

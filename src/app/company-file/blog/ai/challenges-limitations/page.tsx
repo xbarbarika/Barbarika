@@ -25,9 +25,9 @@ const BlogPost = () => {
           {/* Back Button */}
           <button
             onClick={() => router.push('/company-file/blog/ai')}
-            className="mb-8 flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+            className="mb-8 flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
           >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to AI + Blockchain Series
@@ -47,8 +47,8 @@ const BlogPost = () => {
 
           {/* Article Header */}
           <div className="mb-8">
-            <div className="flex items-center text-sm text-gray-400 mb-4">
-              <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-900/50 text-blue-300 mr-4">
+            <div className="flex items-center text-base text-gray-400 mb-6">
+              <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-blue-900/50 text-blue-300 mr-4">
                 Technology
               </span>
               <span>Aug 13, 2025</span>
@@ -58,7 +58,7 @@ const BlogPost = () => {
               <span>Barbarika Labs</span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight" style={{
               fontFamily: 'var(--font-tourney), sans-serif',
               background: 'linear-gradient(90deg, #3B82F6 0%, #EF4444 100%)',
               WebkitBackgroundClip: 'text',
@@ -70,12 +70,12 @@ const BlogPost = () => {
 
           {/* Article Content */}
           <article className="prose prose-lg prose-invert max-w-none">
-            <div className="text-gray-300 leading-relaxed space-y-6" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
-              <p className="text-xl text-gray-200 font-medium mb-8">
+            <div className="text-gray-300 leading-relaxed space-y-8 text-lg" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+              <p className="text-2xl text-gray-200 font-medium mb-10">
                 Understanding the obstacles and constraints in AI + Blockchain adoption.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">The Reality Check</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">The Reality Check</h2>
               
               <p>
                 While AI + Blockchain offers incredible potential, it&apos;s important to understand the challenges 
@@ -83,7 +83,7 @@ const BlogPost = () => {
                 decisions and build more realistic expectations.
               </p>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🔧 Technical Challenges</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🔧 Technical Challenges</h2>
               
               <div className="space-y-6 my-8">
                 <div className="bg-red-900/20 border-l-4 border-red-500 pl-6 py-4">
@@ -111,7 +111,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">💰 Economic Limitations</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">💰 Economic Limitations</h2>
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
@@ -147,7 +147,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🏛️ Regulatory and Legal Hurdles</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🏛️ Regulatory and Legal Hurdles</h2>
               
               <div className="space-y-4 my-8">
                 <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-lg p-6">
@@ -175,7 +175,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">👥 Human and Social Challenges</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">👥 Human and Social Challenges</h2>
               
               <div className="space-y-4 my-8">
                 <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-6">
@@ -203,7 +203,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">🔮 Future Limitations</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🔮 Future Limitations</h2>
               
               <p>
                 Looking ahead, we also face some fundamental limitations:
@@ -216,7 +216,7 @@ const BlogPost = () => {
                 <li><strong>Innovation Plateau:</strong> We may reach limits in what AI + Blockchain can achieve together</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-white mt-8 mb-4">💡 Overcoming Challenges</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">💡 Overcoming Challenges</h2>
               
               <p>
                 While these challenges are real, they&apos;re not insurmountable. Many are being addressed through:
@@ -245,22 +245,22 @@ const BlogPost = () => {
           </article>
 
           {/* Navigation */}
-          <div className="flex justify-between items-center mt-12 pt-8 border-t border-gray-800">
+          <div className="flex justify-between items-center mt-16 pt-10 border-t border-gray-800">
             <button
               onClick={() => router.push('/company-file/blog/ai/benefits-businesses-society')}
-              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+              className="flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               Previous: Day 6 - Benefits for Businesses and Society
             </button>
             <button
               onClick={() => router.push('/company-file/blog/ai/recent-developments-news')}
-              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+              className="flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
             >
               Next: Day 8 - Recent Developments and News
-              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
