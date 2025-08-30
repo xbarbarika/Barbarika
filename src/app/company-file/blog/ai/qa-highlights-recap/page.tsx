@@ -75,14 +75,14 @@ const BlogPost = () => {
                 A comprehensive review and answers to common questions.
               </p>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🎯 Journey Recap: What We&apos;ve Learned</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Journey Recap: What We've Learned</h2>
               
               <p>
-                We&apos;ve covered a lot of ground in our AI + Blockchain journey! Let&apos;s take a moment 
+                We've covered a lot of ground in our AI + Blockchain journey! Let's take a moment 
                 to reflect on the key insights and answer some common questions that have emerged.
               </p>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">📚 Key Takeaways from Our Journey</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Key Takeaways from Our Journey</h2>
               
               <div className="space-y-6 my-8">
                 <div className="bg-blue-900/20 border-l-4 border-blue-500 pl-6 py-4">
@@ -118,7 +118,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">❓ Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Frequently Asked Questions</h2>
               
               <div className="space-y-6 my-8">
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
@@ -133,7 +133,7 @@ const BlogPost = () => {
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
                   <h4 className="text-lg font-semibold text-green-300 mb-3">Q: How long until this becomes mainstream?</h4>
                   <p className="text-gray-300">
-                    <strong>A:</strong> We&apos;re already seeing mainstream adoption in finance and healthcare. 
+                    <strong>A:</strong> We're already seeing mainstream adoption in finance and healthcare. 
                     Expect widespread enterprise adoption within 2-3 years, with consumer applications 
                     following shortly after.
                   </p>
@@ -158,11 +158,11 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">💡 Key Insights to Remember</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Key Insights to Remember</h2>
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-blue-300 mb-3">🔗 Synergy Principle</h4>
+                  <h4 className="text-lg font-semibold text-blue-300 mb-3">Synergy Principle</h4>
                   <p className="text-sm text-gray-300">
                     AI provides intelligence, blockchain provides trust. Together they create 
                     systems that are both smart and secure.
@@ -170,15 +170,15 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gradient-to-r from-green-900/20 to-teal-900/20 border border-green-500/30 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-green-300 mb-3">⚡ Real Impact</h4>
+                  <h4 className="text-lg font-semibold text-green-300 mb-3">Real Impact</h4>
                   <p className="text-sm text-gray-300">
-                    This isn&apos;t theoretical &mdash; real companies are already achieving 
+                    This isn't theoretical &mdash; real companies are already achieving 
                     measurable results with AI + Blockchain solutions.
                   </p>
                 </div>
                 
                 <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-purple-300 mb-3">🌍 Global Scale</h4>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Global Scale</h4>
                   <p className="text-sm text-gray-300">
                     The impact extends beyond technology to social change, financial inclusion, 
                     and environmental sustainability.
@@ -186,7 +186,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gradient-to-r from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-red-300 mb-3">🎯 Future Focus</h4>
+                  <h4 className="text-lg font-semibold text-red-300 mb-3">Future Focus</h4>
                   <p className="text-sm text-gray-300">
                     The next decade will see AI + Blockchain transform every major industry, 
                     creating new opportunities and challenges.
@@ -194,7 +194,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🚀 What&apos;s Next for You?</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">What's Next for You?</h2>
               
               <p>
                 Now that you have a solid foundation, consider these next steps:
@@ -208,7 +208,7 @@ const BlogPost = () => {
                 <li><strong>Apply Your Learning:</strong> Look for opportunities to use this knowledge in your work</li>
               </ul>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🎉 Congratulations!</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Congratulations!</h2>
               
               <p>
                 You&apos;ve completed a comprehensive journey through the fascinating world of AI + Blockchain! 
@@ -225,7 +225,7 @@ const BlogPost = () => {
               </div>
 
               <p className="text-lg font-medium text-blue-300 mt-8">
-                Knowledge is power, and you now have the power to shape the future! 🌟
+                Knowledge is power, and you now have the power to shape the future!
               </p>
             </div>
           </article>
