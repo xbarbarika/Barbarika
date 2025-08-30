@@ -84,7 +84,7 @@ const BlogPost = () => {
                 our achievement and look forward to what comes next.
               </p>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">What We've Accomplished Together</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">What We&apos;ve Accomplished Together</h2>
               
               <div className="space-y-6 my-8">
                 <div className="bg-blue-900/20 border-l-4 border-blue-500 pl-6 py-4">

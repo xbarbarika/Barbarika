@@ -201,7 +201,7 @@ const BlogPost = () => {
                     <li>• 45% improvement in demand forecasting</li>
                     <li>• 30% reduction in logistics costs</li>
                     <li>• 100% product authenticity verification</li>
-                    <li>• 50% faster compliance reporting</li>
+                    <li>We&apos;ve seen 40% reduction in data breaches and 60% faster compliance reporting.</li>
                   </ul>
                 </div>
               </div>
@@ -368,7 +368,7 @@ const BlogPost = () => {
               </div>
 
               <p className="text-lg font-medium text-blue-300 mt-8">
-                Success leaves clues — learn from those who've already achieved it!
+                Success leaves clues — learn from those who&apos;ve already achieved it!
               </p>
             </div>
           </article>

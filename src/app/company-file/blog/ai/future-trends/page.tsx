@@ -239,7 +239,7 @@ const BlogPost = () => {
               </div>
 
               <p className="text-lg font-medium text-blue-300 mt-8">
-                The future is not something we enter, it's something we create!
+                The future is not something we enter, it&apos;s something we create!
               </p>
             </div>
           </article>

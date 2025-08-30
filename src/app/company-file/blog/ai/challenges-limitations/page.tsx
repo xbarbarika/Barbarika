@@ -211,7 +211,7 @@ const BlogPost = () => {
               <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-6">Overcoming Challenges</h2>
               
               <p>
-                While these challenges are real, they're not insurmountable. Many are being addressed through:
+                While these challenges are real, they&apos;re not insurmountable. Many are being addressed through:
               </p>
 
               <ul className="space-y-3 text-gray-700 my-6">

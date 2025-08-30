@@ -81,7 +81,7 @@ const BlogPost = () => {
                   <h4 className="text-lg font-semibold text-gray-800 mb-2">AI-Powered Smart Contracts</h4>
                   <p className="text-gray-700">
                     Researchers have developed AI systems that can automatically write, audit, and optimize 
-                    smart contracts, reducing errors by 80% and development time by 60%.
+                    smart contracts, reducing development time by 60%.
                   </p>
                 </div>
                 
@@ -89,7 +89,7 @@ const BlogPost = () => {
                   <h4 className="text-lg font-semibold text-gray-800 mb-2">Layer 2 Scaling Solutions</h4>
                   <p className="text-gray-700">
                     New blockchain scaling solutions are achieving 100,000+ transactions per second while 
-                    maintaining security, making AI applications on blockchain much more practical.
+                    maintaining decentralization, making blockchain much more practical.
                   </p>
                 </div>
                 
@@ -180,7 +180,7 @@ const BlogPost = () => {
                 <li><strong>180+ countries</strong> with active AI + Blockchain projects</li>
               </ul>
 
-              <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-6">What's Coming Next</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-6">What&apos;s Coming Next</h2>
               
               <p>
                 Based on current trends, we can expect:
@@ -203,7 +203,7 @@ const BlogPost = () => {
               </div>
 
               <p className="text-lg font-medium text-gray-800 mt-8">
-                The future is being built today, and it's more exciting than ever!
+                The future is being built today, and it&apos;s more exciting than ever!
               </p>
             </div>
           </article>
