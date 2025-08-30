@@ -20,7 +20,7 @@ interface BlogPost {
 const aiBlogs: BlogPost[] = [
   {
     slug: 'ai-blockchain-intro',
-    title: 'Day 1: Introduction to AI + Blockchain',
+    title: 'Day 1: Introduction and Basics',
     excerpt: 'Welcome to the Journey! Starting something new can be exciting and sometimes a bit overwhelming.',
     date: 'Aug 7, 2025',
     author: 'Barbarika Labs',
@@ -30,8 +30,8 @@ const aiBlogs: BlogPost[] = [
   },
   {
     slug: 'AI-deep-dive',
-    title: 'Day 2: WHAT IS AI?',
-    excerpt: 'What is AI? Hey there, curious mind! Today, let\'s explore Artificial Intelligence (AI) using a warm, natural story.',
+    title: 'Day 2: Deep Dive: What is AI?',
+    excerpt: 'What is AI? Hey there, curious mind! Today, let&apos;s explore Artificial Intelligence (AI) using a warm, natural story.',
     date: 'Aug 8, 2025',
     author: 'Barbarika Labs',
     readTime: '5 min read',
@@ -40,7 +40,7 @@ const aiBlogs: BlogPost[] = [
   },
   {
     slug: 'blockchain-fundamentals',
-    title: 'Day 3: Blockchain Fundamentals - Beyond Cryptocurrency',
+    title: 'Day 3: Deep Dive: What is Blockchain?',
     excerpt: 'Discover how blockchain technology works beyond digital currencies.',
     date: 'Aug 9, 2025',
     author: 'Barbarika Labs',
@@ -50,7 +50,7 @@ const aiBlogs: BlogPost[] = [
   },
   {
     slug: 'ai-blockchain-synergy',
-    title: 'Day 4: The Perfect Match - AI + Blockchain Synergy',
+    title: 'Day 4: Why Combine AI and Blockchain?',
     excerpt: 'Learn how AI and blockchain complement each other.',
     date: 'Aug 10, 2025',
     author: 'Barbarika Labs',
@@ -60,11 +60,111 @@ const aiBlogs: BlogPost[] = [
   },
   {
     slug: 'real-world-applications',
-    title: 'Day 5: Real-World Applications and Case Studies',
+    title: 'Day 5: Real-World Examples',
     excerpt: 'Examine real companies and projects using AI + Blockchain.',
     date: 'Aug 11, 2025',
     author: 'Barbarika Labs',
     readTime: '5 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'benefits-businesses-society',
+    title: 'Day 6: Benefits for Businesses and Society',
+    excerpt: 'Discover how AI + Blockchain creates value for organizations and communities.',
+    date: 'Aug 12, 2025',
+    author: 'Barbarika Labs',
+    readTime: '4 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'challenges-limitations',
+    title: 'Day 7: Challenges and Limitations',
+    excerpt: 'Understanding the obstacles and constraints in AI + Blockchain adoption.',
+    date: 'Aug 13, 2025',
+    author: 'Barbarika Labs',
+    readTime: '4 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'recent-developments-news',
+    title: 'Day 8: Recent Developments and News',
+    excerpt: 'Stay updated with the latest breakthroughs and industry updates.',
+    date: 'Aug 14, 2025',
+    author: 'Barbarika Labs',
+    readTime: '3 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'future-trends',
+    title: 'Day 9: Future Trends',
+    excerpt: 'Explore what&apos;s coming next in the AI + Blockchain landscape.',
+    date: 'Aug 15, 2025',
+    author: 'Barbarika Labs',
+    readTime: '5 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'qa-highlights-recap',
+    title: 'Day 10: Q&A or Highlights (Recap)',
+    excerpt: 'A comprehensive review and answers to common questions.',
+    date: 'Aug 16, 2025',
+    author: 'Barbarika Labs',
+    readTime: '3 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'practical-tips-beginners',
+    title: 'Day 11: Practical Tips for Beginners',
+    excerpt: 'Actionable advice for those starting their AI + Blockchain journey.',
+    date: 'Aug 17, 2025',
+    author: 'Barbarika Labs',
+    readTime: '4 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'case-studies',
+    title: 'Day 12: Case Studies',
+    excerpt: 'In-depth analysis of successful AI + Blockchain implementations.',
+    date: 'Aug 18, 2025',
+    author: 'Barbarika Labs',
+    readTime: '6 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'interviews-expert-opinions',
+    title: 'Day 13: Interviews or Expert Opinions',
+    excerpt: 'Insights from industry leaders and practitioners.',
+    date: 'Aug 19, 2025',
+    author: 'Barbarika Labs',
+    readTime: '5 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'writing-review-day',
+    title: 'Day 14: Writing and Review Day',
+    excerpt: 'Reflecting on our journey and preparing for the final publication.',
+    date: 'Aug 20, 2025',
+    author: 'Barbarika Labs',
+    readTime: '2 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'final-polish-publish',
+    title: 'Day 15: Final Polish and Publish!',
+    excerpt: 'The culmination of our 15-day journey into AI + Blockchain.',
+    date: 'Aug 21, 2025',
+    author: 'Barbarika Labs',
+    readTime: '3 min read',
     image: '/hero.png',
     category: 'Technology'
   }
