@@ -11,9 +11,7 @@ const blogPosts = [
     slug: 'ai-blockchain',
     title: 'AI + BLOCKCHAIN',
     excerpt: 'Welcome to the Journey! Starting something new can be exciting and sometimes a bit overwhelming. In the coming days, we\'ll break down the fascinating world of Artificial Intelligence (AI) and Blockchain, not only as individual technologies but as a powerful combination shaping the future.',
-    date: 'Aug 7, 2025',
-    author: 'Barbarika Labs',
-    readTime: '2 min read',
+    
     image: '/hero.png',
     category: 'Technology',
     content: `<div class="blog-content">

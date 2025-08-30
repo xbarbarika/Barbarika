@@ -20,7 +20,7 @@ interface BlogPost {
 const aiBlogs: BlogPost[] = [
   {
     slug: 'ai-blockchain-intro',
-    title: 'Day 1: Introduction to AI + Blockchain',
+    title: 'Day 1: Introduction and Basics',
     excerpt: 'Welcome to the Journey! Starting something new can be exciting and sometimes a bit overwhelming.',
     date: 'Aug 7, 2025',
     author: 'Barbarika Labs',
@@ -29,9 +29,9 @@ const aiBlogs: BlogPost[] = [
     category: 'Technology'
   },
   {
-    slug: 'ai-deep-dive',
-    title: 'Day 2: WHAT IS AI?',
-    excerpt: 'What is AI? Hey there, curious mind! Today, let\'s explore Artificial Intelligence (AI) using a warm, natural story.',
+    slug: 'AI-deep-dive',
+    title: 'Day 2: Deep Dive: What is AI?',
+    excerpt: 'What is AI? Hey there, curious mind! Today, let&apos;s explore Artificial Intelligence (AI) using a warm, natural story.',
     date: 'Aug 8, 2025',
     author: 'Barbarika Labs',
     readTime: '5 min read',
@@ -40,7 +40,7 @@ const aiBlogs: BlogPost[] = [
   },
   {
     slug: 'blockchain-fundamentals',
-    title: 'Day 3: Blockchain Fundamentals - Beyond Cryptocurrency',
+    title: 'Day 3: Deep Dive: What is Blockchain?',
     excerpt: 'Discover how blockchain technology works beyond digital currencies.',
     date: 'Aug 9, 2025',
     author: 'Barbarika Labs',
@@ -50,7 +50,7 @@ const aiBlogs: BlogPost[] = [
   },
   {
     slug: 'ai-blockchain-synergy',
-    title: 'Day 4: The Perfect Match - AI + Blockchain Synergy',
+    title: 'Day 4: Why Combine AI and Blockchain?',
     excerpt: 'Learn how AI and blockchain complement each other.',
     date: 'Aug 10, 2025',
     author: 'Barbarika Labs',
@@ -60,11 +60,111 @@ const aiBlogs: BlogPost[] = [
   },
   {
     slug: 'real-world-applications',
-    title: 'Day 5: Real-World Applications and Case Studies',
+    title: 'Day 5: Real-World Examples',
     excerpt: 'Examine real companies and projects using AI + Blockchain.',
     date: 'Aug 11, 2025',
     author: 'Barbarika Labs',
     readTime: '5 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'benefits-businesses-society',
+    title: 'Day 6: Benefits for Businesses and Society',
+    excerpt: 'Discover how AI + Blockchain creates value for organizations and communities.',
+    date: 'Aug 12, 2025',
+    author: 'Barbarika Labs',
+    readTime: '4 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'challenges-limitations',
+    title: 'Day 7: Challenges and Limitations',
+    excerpt: 'Understanding the obstacles and constraints in AI + Blockchain adoption.',
+    date: 'Aug 13, 2025',
+    author: 'Barbarika Labs',
+    readTime: '4 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'recent-developments-news',
+    title: 'Day 8: Recent Developments and News',
+    excerpt: 'Stay updated with the latest breakthroughs and industry updates.',
+    date: 'Aug 14, 2025',
+    author: 'Barbarika Labs',
+    readTime: '3 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'future-trends',
+    title: 'Day 9: Future Trends',
+    excerpt: 'Explore what&apos;s coming next in the AI + Blockchain landscape.',
+    date: 'Aug 15, 2025',
+    author: 'Barbarika Labs',
+    readTime: '5 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'qa-highlights-recap',
+    title: 'Day 10: Q&A or Highlights (Recap)',
+    excerpt: 'A comprehensive review and answers to common questions.',
+    date: 'Aug 16, 2025',
+    author: 'Barbarika Labs',
+    readTime: '3 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'practical-tips-beginners',
+    title: 'Day 11: Practical Tips for Beginners',
+    excerpt: 'Actionable advice for those starting their AI + Blockchain journey.',
+    date: 'Aug 17, 2025',
+    author: 'Barbarika Labs',
+    readTime: '4 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'case-studies',
+    title: 'Day 12: Case Studies',
+    excerpt: 'In-depth analysis of successful AI + Blockchain implementations.',
+    date: 'Aug 18, 2025',
+    author: 'Barbarika Labs',
+    readTime: '6 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'interviews-expert-opinions',
+    title: 'Day 13: Interviews or Expert Opinions',
+    excerpt: 'Insights from industry leaders and practitioners.',
+    date: 'Aug 19, 2025',
+    author: 'Barbarika Labs',
+    readTime: '5 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'writing-review-day',
+    title: 'Day 14: Writing and Review Day',
+    excerpt: 'Reflecting on our journey and preparing for the final publication.',
+    date: 'Aug 20, 2025',
+    author: 'Barbarika Labs',
+    readTime: '2 min read',
+    image: '/hero.png',
+    category: 'Technology'
+  },
+  {
+    slug: 'final-polish-publish',
+    title: 'Day 15: Final Polish and Publish!',
+    excerpt: 'The culmination of our 15-day journey into AI + Blockchain.',
+    date: 'Aug 21, 2025',
+    author: 'Barbarika Labs',
+    readTime: '3 min read',
     image: '/hero.png',
     category: 'Technology'
   }
@@ -94,15 +194,15 @@ const AIBlogPage = () => {
             <div className="max-w-6xl mx-auto text-center">
               <button
                 onClick={() => router.push('/company-file/blog')}
-                className="mb-8 flex items-center text-blue-400 hover:text-blue-300 transition-colors mx-auto"
+                className="mb-8 flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors mx-auto"
               >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
                 Back to Blog
               </button>
               
-              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight px-2" style={{
+              <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 sm:mb-10 leading-tight px-2" style={{
                 fontFamily: 'var(--font-tourney), sans-serif',
                 background: 'linear-gradient(90deg, #3B82F6 0%, #EF4444 100%)',
                 WebkitBackgroundClip: 'text',
@@ -116,7 +216,7 @@ const AIBlogPage = () => {
               }}>
                 AI + Blockchain Series
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 max-w-4xl mx-auto mb-8 sm:mb-12 px-2 sm:px-4" style={{
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 max-w-4xl mx-auto mb-10 sm:mb-14 px-2 sm:px-4" style={{
                 fontFamily: 'var(--font-dm-sans), sans-serif',
                 lineHeight: '1.6'
               }}>
@@ -147,26 +247,26 @@ const AIBlogPage = () => {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full backdrop-blur-sm text-blue-300 bg-blue-900/50">
+                    <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full backdrop-blur-sm text-blue-300 bg-blue-900/50">
                       {blog.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6 relative z-10">
-                  <div className="flex items-center text-sm text-gray-400 mb-2">
+                  <div className="flex items-center text-base text-gray-400 mb-3">
                     <span className="group-hover:text-blue-300 transition-colors">{blog.date}</span>
                     <span className="mx-2">•</span>
-                    <span className="text-sm text-gray-300">{blog.readTime}</span>
+                    <span className="text-base text-gray-300">{blog.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-400 mb-4 group-hover:text-gray-200 transition-colors line-clamp-3">
+                  <p className="text-lg text-gray-400 mb-5 group-hover:text-gray-200 transition-colors line-clamp-3">
                     {blog.excerpt}
                   </p>
-                  <div className="flex items-center text-sm text-blue-400 group-hover:text-blue-300 transition-colors">
+                  <div className="flex items-center text-base text-blue-400 group-hover:text-blue-300 transition-colors">
                     <span>Read more</span>
-                    <svg className="w-4 h-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 ml-1 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
