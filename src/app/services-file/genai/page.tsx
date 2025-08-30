@@ -170,7 +170,7 @@ export default function GenAIService() {
             {[
               {
                 title: 'Model Validation & Fact Checking',
-                description: 'Our data experts review your model\'s responses for accuracy, identify errors, and rewrite responses to improve performance.',
+                description: 'Our data experts review your model&apos;s responses for accuracy, identify errors, and rewrite responses to improve performance.',
                 features: ['Response accuracy validation', 'Error identification', 'Automated workflow', 'Quality assurance']
               },
               {
@@ -346,7 +346,7 @@ export default function GenAIService() {
                 fontFamily: 'var(--font-numans), sans-serif'
               }}
             >
-              Let's discuss how our AI solutions can drive growth, reduce costs, and give you a competitive edge.
+              Let&apos;s discuss how our AI solutions can drive growth, reduce costs, and give you a competitive edge.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/book-demo">

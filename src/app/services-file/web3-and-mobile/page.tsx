@@ -210,7 +210,7 @@ export default function Service() {
                   letterSpacing: '0.05em',
                   textTransform: 'uppercase'
                 }}>
-                  Doesn't Exist Yet
+                  Doesn&apos;t Exist Yet
                 </span>
               </h1>
               
@@ -506,7 +506,7 @@ export default function Service() {
               Client Success Stories
             </h2>
             <p className="text-lg lg:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Real Web3 and mobile projects we've delivered for our clients, showcasing our expertise and innovation
+              Real Web3 and mobile projects we&apos;ve delivered for our clients, showcasing our expertise and innovation
             </p>
           </div>
           
@@ -592,7 +592,7 @@ export default function Service() {
                 textShadow: '0 4px 20px rgba(0,0,0,0.5)'
               }}
             >
-              Ready to Build Something People Haven't Seen Before?
+              Ready to Build Something People Haven&apos;t Seen Before?
             </h2>
             <p 
               className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed"
@@ -600,7 +600,7 @@ export default function Service() {
                 fontFamily: 'var(--font-numans), sans-serif'
               }}
             >
-              We combine protocol engineering with product craft. Let's turn your idea into a product your users rave about.
+              We combine protocol engineering with product craft. Let&apos;s turn your idea into a product your users rave about.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/book-demo">
