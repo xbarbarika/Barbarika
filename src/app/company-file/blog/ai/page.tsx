@@ -29,7 +29,7 @@ const aiBlogs: BlogPost[] = [
     category: 'Technology'
   },
   {
-    slug: 'ai-deep-dive',
+    slug: 'AI-deep-dive',
     title: 'Day 2: WHAT IS AI?',
     excerpt: 'What is AI? Hey there, curious mind! Today, let\'s explore Artificial Intelligence (AI) using a warm, natural story.',
     date: 'Aug 8, 2025',
