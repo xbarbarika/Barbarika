@@ -25,7 +25,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 7, 2025',
     author: 'Barbarika Labs',
     readTime: '2 min read',
-    image: '/hero.png',
+    image: '/bg-1.jpg',
     category: 'Technology'
   },
   {
@@ -35,7 +35,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 8, 2025',
     author: 'Barbarika Labs',
     readTime: '5 min read',
-    image: '/hero.png',
+    image: '/bg-2.jpg',
     category: 'Technology'
   },
   {
@@ -45,7 +45,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 9, 2025',
     author: 'Barbarika Labs',
     readTime: '3 min read',
-    image: '/hero.png',
+    image: '/bg-3.jpg',
     category: 'Technology'
   },
   {
@@ -55,7 +55,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 10, 2025',
     author: 'Barbarika Labs',
     readTime: '4 min read',
-    image: '/hero.png',
+    image: '/bg-4.jpg',
     category: 'Technology'
   },
   {
@@ -65,7 +65,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 11, 2025',
     author: 'Barbarika Labs',
     readTime: '5 min read',
-    image: '/hero.png',
+    image: '/bg-5.jpg',
     category: 'Technology'
   },
   {
@@ -75,7 +75,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 12, 2025',
     author: 'Barbarika Labs',
     readTime: '4 min read',
-    image: '/hero.png',
+    image: '/bg-6.jpg',
     category: 'Technology'
   },
   {
@@ -85,7 +85,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 13, 2025',
     author: 'Barbarika Labs',
     readTime: '4 min read',
-    image: '/hero.png',
+    image: '/bg-7.jpg',
     category: 'Technology'
   },
   {
@@ -95,7 +95,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 14, 2025',
     author: 'Barbarika Labs',
     readTime: '3 min read',
-    image: '/hero.png',
+    image: '/bg-8.jpg',
     category: 'Technology'
   },
   {
@@ -105,7 +105,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 15, 2025',
     author: 'Barbarika Labs',
     readTime: '5 min read',
-    image: '/hero.png',
+    image: '/bg-9.jpg',
     category: 'Technology'
   },
   {
@@ -115,7 +115,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 16, 2025',
     author: 'Barbarika Labs',
     readTime: '3 min read',
-    image: '/hero.png',
+    image: '/bg-10.jpg',
     category: 'Technology'
   },
   {
@@ -125,7 +125,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 17, 2025',
     author: 'Barbarika Labs',
     readTime: '4 min read',
-    image: '/hero.png',
+    image: '/bg-1.jpg',
     category: 'Technology'
   },
   {
@@ -135,7 +135,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 18, 2025',
     author: 'Barbarika Labs',
     readTime: '6 min read',
-    image: '/hero.png',
+    image: '/bg-2.jpg',
     category: 'Technology'
   },
   {
@@ -145,7 +145,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 19, 2025',
     author: 'Barbarika Labs',
     readTime: '5 min read',
-    image: '/hero.png',
+    image: '/bg-3.jpg',
     category: 'Technology'
   },
   {
@@ -155,7 +155,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 20, 2025',
     author: 'Barbarika Labs',
     readTime: '2 min read',
-    image: '/hero.png',
+    image: '/bg-4.jpg',
     category: 'Technology'
   },
   {
@@ -165,7 +165,7 @@ const aiBlogs: BlogPost[] = [
     date: 'Aug 21, 2025',
     author: 'Barbarika Labs',
     readTime: '3 min read',
-    image: '/hero.png',
+    image: '/bg-5.jpg',
     category: 'Technology'
   }
 ];
@@ -190,19 +190,19 @@ const AIBlogPage = () => {
       
       <div className="relative">
         <div className="w-full">
-          <div className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 xl:px-24">
+          <div className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 xl:px-24">
             <div className="max-w-6xl mx-auto text-center">
               <button
                 onClick={() => router.push('/company-file/blog')}
-                className="mb-8 flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors mx-auto"
+                className="mb-4 flex items-center text-base text-blue-400 hover:text-blue-300 transition-colors mx-auto"
               >
-                <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
                 Back to Blog
               </button>
               
-              <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 sm:mb-10 leading-tight px-2" style={{
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-2" style={{
                 fontFamily: 'var(--font-tourney), sans-serif',
                 background: 'linear-gradient(90deg, #3B82F6 0%, #EF4444 100%)',
                 WebkitBackgroundClip: 'text',
@@ -216,7 +216,7 @@ const AIBlogPage = () => {
               }}>
                 AI + Blockchain Series
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 max-w-4xl mx-auto mb-10 sm:mb-14 px-2 sm:px-4" style={{
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-4xl mx-auto mb-6 sm:mb-8 px-2 sm:px-4" style={{
                 fontFamily: 'var(--font-dm-sans), sans-serif',
                 lineHeight: '1.6'
               }}>

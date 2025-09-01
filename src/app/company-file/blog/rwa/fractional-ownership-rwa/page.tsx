@@ -37,7 +37,7 @@ const FractionalOwnershipRWAPage = () => {
                 <div className="flex items-center text-sm text-gray-400 mb-8">
                   <span>By Prince Bhesaniya</span>
                   <span className="mx-2">•</span>
-                  <span>Sep 25, 2025</span>
+                  <span>Aug 25, 2025</span>
                   <span className="mx-2">•</span>
                   <span>7 min read</span>
                 </div>

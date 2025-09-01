@@ -62,9 +62,9 @@ const Blog = () => {
       
       <div className="relative">
         <div className="w-full">
-          <div className="py-20 sm:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 xl:px-24">
+          <div className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12 xl:px-24">
             <div className="max-w-6xl mx-auto text-center">
-              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight px-2" style={{
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight px-2" style={{
                 fontFamily: 'var(--font-tourney), sans-serif',
                 background: 'linear-gradient(90deg, #3B82F6 0%, #EF4444 100%)',
                 WebkitBackgroundClip: 'text',
@@ -78,7 +78,7 @@ const Blog = () => {
               }}>
                 Insights & Updates
               </h1>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 max-w-4xl mx-auto mb-8 sm:mb-12 px-2 sm:px-4" style={{
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/80 max-w-4xl mx-auto mb-6 sm:mb-8 px-2 sm:px-4" style={{
                 fontFamily: 'var(--font-dm-sans), sans-serif',
                 lineHeight: '1.6'
               }}>

@@ -11,8 +11,8 @@ const RWARealWorldExamplesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-gray-200 relative">
       <div className="fixed inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/30 via-black/90 to-yellow-900/30" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-green-500/5 via-transparent to-yellow-500/5" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-black/90 to-red-900/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-blue-500/5 via-transparent to-red-500/5" />
       </div>
       
       <Navbar />
@@ -23,7 +23,7 @@ const RWARealWorldExamplesPage = () => {
             <div className="max-w-6xl mx-auto">
               <button
                 onClick={() => router.push('/company-file/blog/rwa')}
-                className="mb-8 flex items-center text-green-400 hover:text-green-300 transition-colors"
+                className="mb-8 flex items-center text-lg text-blue-400 hover:text-blue-300 transition-colors"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -31,16 +31,22 @@ const RWARealWorldExamplesPage = () => {
                 Back to RWA Series
               </button>
               
-              <div className="prose prose-invert max-w-4xl mx-auto">
-                <h1 className="text-3xl font-bold text-white mb-6">Real World Examples of RWAs: 2024-2025</h1>
+              <div className="prose prose-lg prose-invert max-w-none">
+                <h1 className="text-3xl font-bold text-white mb-2" style={{
+                  fontFamily: 'var(--font-tourney), sans-serif',
+                  background: 'linear-gradient(90deg, #3B82F6 0%, #EF4444 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}>Real World Examples of RWAs: 2024-2025</h1>
                 <h2 className="text-2xl font-semibold text-gray-300 mb-6">From Gold to Green Finance</h2>
                 
-                <div className="flex items-center text-sm text-gray-400 mb-8">
-                  <span>By Prince Bhesaniya</span>
-                  <span className="mx-2">•</span>
-                  <span>Sep 10, 2025</span>
+                <div className="flex items-center text-base text-gray-400 mb-8">
+                  <span className="inline-block px-3 py-1 text-sm font-semibold rounded-full bg-blue-900/50 text-blue-300 mr-4">Finance</span>
+                  <span>Aug 19, 2025</span>
                   <span className="mx-2">•</span>
                   <span>6 min read</span>
+                  <span className="mx-2">•</span>
+                  <span>Prince Bhesaniya</span>
                 </div>
 
                 <div className="relative w-full h-96 mb-8 rounded-xl overflow-hidden">
