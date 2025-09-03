@@ -83,7 +83,7 @@ const BlogPost = () => {
                 just concepts &mdash; they&apos;re solutions that are actively improving lives and businesses today.
               </p>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🏥 Healthcare Revolution</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Healthcare Revolution</h2>
               
               <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-6 my-8">
                 <h3 className="text-xl font-semibold text-blue-300 mb-3">Patientory</h3>
@@ -95,7 +95,7 @@ const BlogPost = () => {
                 </p>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🏦 Financial Innovation</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Financial Innovation</h2>
               
               <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-6 my-8">
                 <h3 className="text-xl font-semibold text-green-300 mb-3">Numerai</h3>
@@ -106,7 +106,7 @@ const BlogPost = () => {
                 </p>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">📦 Supply Chain Transparency</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Supply Chain Transparency</h2>
               
               <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-6 my-8">
                 <h3 className="text-xl font-semibold text-purple-300 mb-3">IBM Food Trust</h3>
@@ -117,7 +117,7 @@ const BlogPost = () => {
                 </p>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🎯 Marketing & Advertising</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Marketing & Advertising</h2>
               
               <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-6 my-8">
                 <h3 className="text-xl font-semibold text-red-300 mb-3">Brave Browser</h3>
@@ -128,7 +128,7 @@ const BlogPost = () => {
                 </p>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🚗 Transportation & Mobility</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Transportation & Mobility</h2>
               
               <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-6 my-8">
                 <h3 className="text-xl font-semibold text-yellow-300 mb-3">IOTA Foundation</h3>
@@ -171,7 +171,7 @@ const BlogPost = () => {
               </div>
 
               <p className="text-lg font-medium text-blue-300 mt-8">
-                The future is already here &mdash; and it&apos;s more exciting than we imagined! 🌟
+                The future is already here &mdash; and it&apos;s more exciting than we imagined!
               </p>
             </div>
           </article>

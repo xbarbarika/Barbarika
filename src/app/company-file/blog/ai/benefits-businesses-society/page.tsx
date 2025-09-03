@@ -83,11 +83,11 @@ const BlogPost = () => {
                 &mdash; it&apos;s about solving real problems and creating measurable value.
               </p>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🏢 Business Benefits</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Business Benefits</h2>
               
               <div className="space-y-6 my-8">
                 <div className="bg-blue-900/20 border-l-4 border-blue-500 pl-6 py-4">
-                  <h4 className="text-lg font-semibold text-blue-300 mb-2">💰 Cost Reduction</h4>
+                  <h4 className="text-lg font-semibold text-blue-300 mb-2">Cost Reduction</h4>
                   <p className="text-gray-300">
                     AI automates complex processes while blockchain eliminates intermediaries, reducing 
                     operational costs by 20-40% in many industries.
@@ -95,7 +95,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-green-900/20 border-l-4 border-green-500 pl-6 py-4">
-                  <h4 className="text-lg font-semibold text-green-300 mb-2">⚡ Increased Efficiency</h4>
+                  <h4 className="text-lg font-semibold text-green-300 mb-2">Increased Efficiency</h4>
                   <p className="text-gray-300">
                     Automated decision-making and transparent processes reduce delays and improve 
                     overall operational efficiency.
@@ -103,7 +103,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-purple-900/20 border-l-4 border-purple-500 pl-6 py-4">
-                  <h4 className="text-lg font-semibold text-purple-300 mb-2">🔒 Enhanced Security</h4>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-2">Enhanced Security</h4>
                   <p className="text-gray-300">
                     Blockchain&apos;s immutability combined with AI&apos;s threat detection creates 
                     robust security systems that are nearly impossible to breach.
@@ -111,7 +111,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-red-900/20 border-l-4 border-red-500 pl-6 py-4">
-                  <h4 className="text-lg font-semibold text-red-300 mb-2">📊 Better Decision Making</h4>
+                  <h4 className="text-lg font-semibold text-red-300 mb-2">Better Decision Making</h4>
                   <p className="text-gray-300">
                     AI analyzes blockchain-verified data to provide insights that improve strategic 
                     planning and operational decisions.
@@ -119,11 +119,11 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🌍 Societal Benefits</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Societal Benefits</h2>
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-blue-300 mb-3">🏥 Healthcare Access</h4>
+                  <h4 className="text-lg font-semibold text-blue-300 mb-3">Healthcare Access</h4>
                   <p className="text-sm text-gray-300">
                     AI-powered diagnostics with blockchain-secured medical records make healthcare 
                     more accessible and affordable worldwide.
@@ -131,7 +131,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-green-300 mb-3">🏦 Financial Inclusion</h4>
+                  <h4 className="text-lg font-semibold text-green-300 mb-3">Financial Inclusion</h4>
                   <p className="text-sm text-gray-300">
                     Decentralized financial services powered by AI provide banking access to 
                     billions of unbanked individuals globally.
@@ -139,7 +139,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-purple-300 mb-3">🎓 Education</h4>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Education</h4>
                   <p className="text-sm text-gray-300">
                     AI personalizes learning while blockchain verifies credentials, making 
                     education more accessible and credible.
@@ -147,7 +147,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-red-300 mb-3">🌱 Environmental Impact</h4>
+                  <h4 className="text-lg font-semibold text-red-300 mb-3">Environmental Impact</h4>
                   <p className="text-sm text-gray-300">
                     AI optimizes resource usage while blockchain tracks environmental impact, 
                     helping combat climate change.
@@ -155,11 +155,11 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">📈 Industry-Specific Benefits</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Industry-Specific Benefits</h2>
               
               <div className="space-y-4 my-8">
                 <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-blue-300 mb-3">🏭 Manufacturing</h4>
+                  <h4 className="text-lg font-semibold text-blue-300 mb-3">Manufacturing</h4>
                   <p className="text-gray-300">
                     AI predicts maintenance needs while blockchain tracks supply chain authenticity, 
                     reducing downtime and ensuring quality.
@@ -167,7 +167,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gradient-to-r from-green-900/20 to-teal-900/20 border border-green-500/30 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-green-300 mb-3">🏪 Retail</h4>
+                  <h4 className="text-lg font-semibold text-green-300 mb-3">Retail</h4>
                   <p className="text-gray-300">
                     AI personalizes customer experiences while blockchain ensures product authenticity, 
                     increasing sales and customer trust.
@@ -175,7 +175,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-purple-300 mb-3">🏦 Banking</h4>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Banking</h4>
                   <p className="text-gray-300">
                     AI detects fraud while blockchain provides transparent transactions, 
                     reducing financial crime and improving trust.
@@ -183,7 +183,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🎯 Measurable Impact</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Measurable Impact</h2>
               
               <p>
                 The benefits aren&apos;t just theoretical &mdash; they&apos;re measurable:
@@ -207,7 +207,7 @@ const BlogPost = () => {
               </div>
 
               <p className="text-lg font-medium text-blue-300 mt-8">
-                The benefits are real, measurable, and already transforming industries! 🚀
+                The benefits are real, measurable, and already transforming industries!
               </p>
             </div>
           </article>
