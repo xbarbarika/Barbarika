@@ -423,7 +423,7 @@ const MarketingGrid = () => {
           }
           
           .marketing-card:hover {
-            transform: translateY(-8px) rotateX(2deg) rotateY(2deg) !important;
+            transform: translateY(-4px) rotateX(1deg) rotateY(1deg) scale(1.02) !important;
             box-shadow: 
               0 20px 60px rgba(255, 59, 48, 0.2),
               0 0 0 1px rgba(255, 59, 48, 0.3),
@@ -431,24 +431,25 @@ const MarketingGrid = () => {
               0 0 40px rgba(255, 59, 48, 0.2) !important;
             background: rgba(20, 20, 20, 0.8) !important;
             border-color: rgba(255, 59, 48, 0.6) !important;
+            z-index: 10 !important;
           }
           
           /* Mobile hover adjustments */
           @media (max-width: 375px) {
             .marketing-card:hover {
-              transform: translateY(-2px) rotateX(0.5deg) rotateY(0.5deg) !important;
+              transform: translateY(-2px) rotateX(0.5deg) rotateY(0.5deg) scale(1.01) !important;
             }
           }
 
           @media (min-width: 376px) and (max-width: 640px) {
             .marketing-card:hover {
-              transform: translateY(-3px) rotateX(0.8deg) rotateY(0.8deg) !important;
+              transform: translateY(-3px) rotateX(0.8deg) rotateY(0.8deg) scale(1.015) !important;
             }
           }
 
           @media (min-width: 641px) and (max-width: 768px) {
             .marketing-card:hover {
-              transform: translateY(-4px) rotateX(1deg) rotateY(1deg) !important;
+              transform: translateY(-4px) rotateX(1deg) rotateY(1deg) scale(1.02) !important;
             }
           }
           
@@ -510,6 +511,39 @@ const MarketingGrid = () => {
           .marketing-card:hover::before {
             left: 100% !important;
           }
+
+          /* Horizontal scrolling animation */
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          
+          .animate-scroll {
+            animation: scroll 60s linear infinite;
+            padding: 0 2rem;
+          }
+          
+          .animate-scroll:hover {
+            animation-play-state: paused;
+          }
+          
+          /* Container overflow management */
+          .relative.overflow-hidden {
+            overflow-x: hidden !important;
+            overflow-y: visible !important;
+            padding-top: 1rem !important;
+            padding-bottom: 2rem !important;
+          }
+          
+          /* Ensure cards don't overflow container */
+          .marketing-card {
+            will-change: transform !important;
+            contain: layout style paint !important;
+          }
         `
       }} />
       <div 
@@ -540,7 +574,7 @@ const MarketingGrid = () => {
             position: 'relative',
           }}
         >
-        <div className="w-full flex justify-center mb-8 sm:mb-12 lg:mb-16 px-4">
+        <div className="w-full flex justify-center mb-16 sm:mb-20 lg:mb-24 xl:mb-28 px-4">
           <div className="w-full max-w-5xl mx-auto text-center">
             <h1 
               className="inline-block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
@@ -581,26 +615,22 @@ const MarketingGrid = () => {
             </h1>
           </div>
         </div>
-        <div 
-          className="marketing-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto px-2 sm:px-4 lg:px-0 landscape-grid-gap"
-          style={{
-            columnGap: '12px',
-            rowGap: '16px'
-          }}
-        >
-          {services.map((service, index) => (
+        <div className="relative overflow-hidden w-full mt-8 sm:mt-12 lg:mt-16" style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>
+          <div className="flex animate-scroll" style={{ gap: '1.5rem' }}>
+            {/* First set of cards */}
+            {services.map((service, index) => (
             <div
-              key={index}
-              className={`p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 transition-all duration-300 marketing-card landscape-card-height ${
+              key={`first-${index}`}
+              className={`flex-shrink-0 w-80 mx-2 p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 transition-all duration-300 marketing-card landscape-card-height ${
                 service.active
                   ? "bg-gradient-to-br from-red-900/20 to-red-900/40 text-white shadow-xl border-2 border-red-500/50"
                   : "hover:shadow-lg hover:scale-105"
               }`}
               style={{
-                width: '100%',
-                maxWidth: '100%',
+                width: '320px',
+                maxWidth: '320px',
                 height: 'auto',
-                minHeight: '200px',
+                minHeight: '280px',
                 flexShrink: 0,
                 borderRadius: '14px',
                 position: 'relative',
@@ -700,6 +730,120 @@ const MarketingGrid = () => {
               </div>
             </div>
           ))}
+          {/* Duplicate set for seamless loop */}
+          {services.map((service, index) => (
+            <div
+              key={`second-${index}`}
+              className={`flex-shrink-0 w-80 mx-2 p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 transition-all duration-300 marketing-card landscape-card-height ${
+                service.active
+                  ? "bg-gradient-to-br from-red-900/20 to-red-900/40 text-white shadow-xl border-2 border-red-500/50"
+                  : "hover:shadow-lg hover:scale-105"
+              }`}
+              style={{
+                width: '320px',
+                maxWidth: '320px',
+                height: 'auto',
+                minHeight: '280px',
+                flexShrink: 0,
+                borderRadius: '14px',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+            >
+              <div className="mb-2.5 xs:mb-3 sm:mb-4">
+                <div className="p-1.5 xs:p-2 w-fit mb-2.5 xs:mb-3 sm:mb-4">
+                  {service.icon ? (
+                    <Image
+                      src={`/${service.icon}`}
+                      alt={service.title}
+                      width={18}
+                      height={18}
+                      className="service-icon transition-transform duration-300 w-4.5 h-4.5 xs:w-5 xs:h-5 sm:w-6 sm:h-6"
+                      style={{
+                        flexShrink: 0,
+                        filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(0deg) brightness(100%) contrast(100%)'
+                      }}
+                    />
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="service-icon transition-transform duration-300 w-4.5 h-4.5 xs:w-5 xs:h-5 sm:w-6 sm:h-6"
+                      style={{
+                        flexShrink: 0,
+                        color: '#FFFFFF'
+                      }}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
+                      />
+                    </svg>
+                  )}
+                </div>
+              </div>
+              <h2 
+                className="mb-2.5 xs:mb-3 sm:mb-4 transition-all duration-300 text-sm xs:text-sm sm:text-base lg:text-lg text-overflow-fix"
+                style={{
+                  color: '#FFFFFF',
+                  fontFamily: '"DM Sans"',
+                  fontStyle: 'normal',
+                  fontWeight: 600,
+                  lineHeight: '120%'
+                }}
+              >
+                {service.title}
+              </h2>
+              <p 
+                className="mb-3 xs:mb-4 text-xs xs:text-sm sm:text-base lg:text-base text-overflow-fix landscape-spacing"
+                style={{
+                  color: 'rgba(255, 255, 255, 0.7)',
+                  fontFamily: '"DM Sans"',
+                  fontStyle: 'normal',
+                  fontWeight: 400,
+                  lineHeight: '140%',
+                  flexGrow: 1
+                }}
+              >
+                {service.description}
+              </p>
+              <div className="flex items-center justify-between">
+                <div 
+                  className="department-badge px-1.5 xs:px-2 py-1 xs:py-1.5 sm:px-3 sm:py-1.5 rounded-full text-xs font-medium border border-white/20"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    color: '#FFFFFF',
+                    fontFamily: '"DM Sans"',
+                    fontStyle: 'normal',
+                    fontWeight: 500,
+                    lineHeight: '100%'
+                  }}
+                >
+                  {service.projects} Projects
+                </div>
+                {service.active && (
+                  <div 
+                    className="badge px-1.5 xs:px-2 py-1 xs:py-1.5 sm:px-3 sm:py-1.5 rounded-full text-xs font-medium"
+                    style={{
+                      background: 'linear-gradient(90deg, #FF3B30 0%, #BA34E2 100%)',
+                      color: '#FFFFFF',
+                      fontFamily: '"DM Sans"',
+                      fontStyle: 'normal',
+                      fontWeight: 600,
+                      lineHeight: '100%'
+                    }}
+                  >
+                    Active
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+          </div>
         </div>
         </div>
       </div>

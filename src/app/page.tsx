@@ -3,7 +3,6 @@ import { useState } from 'react';
 import HeroSection from "@/components/Herosection";
 import Navbar from '../components/Navbar';
 import MenuModal from '@/components/MenuModal';
-import EvolutionSection from '@/components/EvolutionSection';
 import MarketingGrid from '@/components/MarketingGrid';
 import LocationsSection from '@/components/LocationsSection';
 import PricingPlans from '@/components/PricingPlans';
@@ -21,7 +20,6 @@ export default function Home() {
       {/* Download Roadmap Section */}
       {/* Removed as per user request */}
       
-      <EvolutionSection />
       <MarketingGrid />
       <LocationsSection />
       <PricingPlans />

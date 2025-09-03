@@ -211,7 +211,7 @@ const BlogPost = () => {
               </div>
 
               <p className="text-lg font-medium text-blue-300 mt-8">
-                The future is being built today, and it's more exciting than ever! 🚀
+                The future is being built today, and it&apos;s more exciting than ever! 🚀
               </p>
             </div>
           </article>
