@@ -155,24 +155,7 @@ const MenuModal: React.FC<MenuModalProps> = ({ isOpen, onClose }) => {
               )}
             </div>
 
-            {/* Our People - Scroll to section if on home, otherwise navigate */}
-            <button
-              onClick={() => {
-                if (pathname === '/') {
-                  handleClose();
-                  setTimeout(() => {
-                    document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' });
-                  }, 300);
-                } else {
-                  window.location.href = '/#team';
-                }
-              }}
-              className="group w-full flex items-center justify-between p-3 sm:p-4 rounded-xl transition-all duration-200 hover:bg-white/5"
-            >
-              <span className="text-base sm:text-lg font-medium text-white group-hover:text-pink-400 transition-colors" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Our People
-              </span>
-            </button>
+            
 
             {/* Company with Dropdown */}
             <div>

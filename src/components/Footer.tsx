@@ -232,7 +232,7 @@ const Footer = () => {
                   cursor: 'pointer'
                 }}
               >
-                Our People
+                
               </Link>
             </li>
             <li>

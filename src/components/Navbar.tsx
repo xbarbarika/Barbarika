@@ -14,7 +14,6 @@ interface NavbarProps {
 
 const menuItems = [
   { label: 'Services'},
-  { label: 'Our people' },
   { label: 'Company' },
   { label: 'Pricing' },
 ];
