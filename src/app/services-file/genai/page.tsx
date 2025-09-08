@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import MenuModal from '@/components/MenuModal';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function GenAIService() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -322,6 +323,197 @@ export default function GenAIService() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Agents Section */}
+      <section className="py-16 sm:py-20 lg:py-24" style={{ backgroundColor: '#000000' }}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 lg:mb-6"
+              style={{
+                color: 'white',
+                fontFamily: 'var(--font-dm-sans), sans-serif',
+                textShadow: '0 4px 20px rgba(0,0,0,0.5)'
+              }}
+            >
+              AI Agents for Business
+            </h2>
+            <p 
+              className="text-lg sm:text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto"
+              style={{
+                fontFamily: 'var(--font-numans), sans-serif',
+                lineHeight: '1.6'
+              }}
+            >
+              Transform your customer interactions with intelligent AI agents that work 24/7 to engage, assist, and convert your audience.
+            </p>
+          </div>
+
+          {/* WhatsApp Agent Showcase */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Image Section */}
+              <div className="relative">
+                <div className="relative rounded-3xl overflow-hidden" style={{
+                  background: 'linear-gradient(135deg, rgba(255, 59, 48, 0.1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.95) 100%)',
+                  border: '2px solid rgba(255, 255, 255, 0.1)',
+                  backdropFilter: 'blur(15px)',
+                  boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                }}>
+                  <Image 
+                    src="/WA-agent.png" 
+                    alt="WhatsApp AI Agent Workflow" 
+                    width={800}
+                    height={600}
+                    className="w-full h-auto rounded-3xl"
+                    style={{ filter: 'brightness(1.1) contrast(1.05)' }}
+                  />
+                  
+                  {/* Floating Elements */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full animate-pulse" style={{ background: '#FF3B30' }}></div>
+                  <div className="absolute -bottom-4 -left-4 w-6 h-6 rounded-full animate-bounce" style={{ background: '#8B5CF6', animationDelay: '1s' }}></div>
+                </div>
+              </div>
+
+              {/* Content Section */}
+              <div className="space-y-8">
+                <div>
+                  <h3 
+                    className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6"
+                    style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}
+                  >
+                    WhatsApp AI Agent
+                  </h3>
+                  <p 
+                    className="text-lg text-white/80 leading-relaxed mb-6"
+                    style={{ fontFamily: 'var(--font-numans), sans-serif' }}
+                  >
+                    Our WhatsApp AI Agent revolutionizes customer communication by providing instant, intelligent responses that feel natural and human-like. Built with advanced language models and integrated with your business systems.
+                  </p>
+                </div>
+
+                {/* Features Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    {
+                      icon: (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                        </svg>
+                      ),
+                      title: "24/7 Availability",
+                      description: "Never miss a customer inquiry with round-the-clock intelligent responses"
+                    },
+                    {
+                      icon: (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                      ),
+                      title: "Smart Context",
+                      description: "Understands conversation history and provides relevant, personalized responses"
+                    },
+                    {
+                      icon: (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      ),
+                      title: "Lightning Fast",
+                      description: "Instant responses that keep customers engaged and satisfied"
+                    },
+                    {
+                      icon: (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                      ),
+                      title: "Secure & Reliable",
+                      description: "Enterprise-grade security with 99.9% uptime guarantee"
+                    }
+                  ].map((feature, index) => (
+                    <div 
+                      key={index}
+                      className="group p-4 rounded-2xl transition-all duration-300 hover:scale-105"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        backdropFilter: 'blur(10px)'
+                      }}
+                    >
+                      <div className="flex items-start space-x-3">
+                        <div 
+                          className="w-10 h-10 rounded-xl flex items-center justify-center text-white group-hover:text-red-400 transition-colors duration-300"
+                          style={{
+                            background: 'rgba(255, 59, 48, 0.1)',
+                            border: '1px solid rgba(255, 59, 48, 0.3)'
+                          }}
+                        >
+                          {feature.icon}
+                        </div>
+                        <div>
+                          <h4 
+                            className="text-lg font-semibold text-white mb-1"
+                            style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}
+                          >
+                            {feature.title}
+                          </h4>
+                          <p 
+                            className="text-sm text-white/70"
+                            style={{ fontFamily: 'var(--font-numans), sans-serif' }}
+                          >
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <div className="pt-6">
+                  <p 
+                    className="text-lg text-white/90 mb-6"
+                    style={{ fontFamily: 'var(--font-numans), sans-serif' }}
+                  >
+                    Ready to create your own personalized AI agent? Let&apos;s build something amazing together.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link href="/book-demo">
+                      <button 
+                        className="group px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 relative overflow-hidden"
+                        style={{
+                          background: '#FF3B30',
+                          color: 'white',
+                          fontFamily: 'var(--font-dm-sans), sans-serif'
+                        }}
+                      >
+                        <span className="relative z-10">Create My AI Agent</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </button>
+                    </Link>
+                    <Link href="/company-file/contact">
+                      <button 
+                        className="group px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105"
+                        style={{
+                          background: 'rgba(255, 255, 255, 0.1)',
+                          color: 'white',
+                          border: '2px solid rgba(255, 255, 255, 0.2)',
+                          backdropFilter: 'blur(10px)',
+                          fontFamily: 'var(--font-dm-sans), sans-serif'
+                        }}
+                      >
+                        Contact Us
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

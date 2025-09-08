@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -83,28 +84,32 @@ export default function HeroSection() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-8 justify-center lg:justify-start">
-            <button 
-              className="px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-              style={{
-                background: 'rgba(0, 0, 0, 0.2)',
-                color: 'white',
-                border: '2px solid #FF3B30',
-                backdropFilter: 'blur(10px)'
-              }}
-            >
-              Get Started
-            </button>
-            <button 
-              className="px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-              style={{
-                background: 'rgba(0, 0, 0, 0.2)',
-                color: 'white',
-                border: '2px solid #4776E6',
-                backdropFilter: 'blur(10px)'
-              }}
-            >
-              Learn More
-            </button>
+            <Link href="/book-demo">
+              <button 
+                className="px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                style={{
+                  background: 'rgba(0, 0, 0, 0.2)',
+                  color: 'white',
+                  border: '2px solid #FF3B30',
+                  backdropFilter: 'blur(10px)'
+                }}
+              >
+                Get Started
+              </button>
+            </Link>
+            <Link href="/company-file/about">
+              <button 
+                className="px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                style={{
+                  background: 'rgba(0, 0, 0, 0.2)',
+                  color: 'white',
+                  border: '2px solid #4776E6',
+                  backdropFilter: 'blur(10px)'
+                }}
+              >
+                Learn More
+              </button>
+            </Link>
           </div>
         </div>
         
