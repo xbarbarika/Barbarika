@@ -518,6 +518,154 @@ export default function GenAIService() {
         </div>
       </section>
 
+      {/* AWS Automation Infrastructure Section */}
+      <section className="py-16 sm:py-20 lg:py-24" style={{ backgroundColor: '#000000' }}>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          {/* AWS Infrastructure Showcase */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Content Section */}
+              <div className="space-y-8">
+                <div>
+                  <h3 
+                    className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-6"
+                    style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}
+                  >
+                    Automation Infrastructure on AWS
+                  </h3>
+                  <p 
+                    className="text-lg text-white/80 leading-relaxed mb-6"
+                    style={{ fontFamily: 'var(--font-numans), sans-serif' }}
+                  >
+                    We provide businesses with a self-hosted, always-on automation environment deployed on AWS. This setup ensures your workflows run 24/7 without third-party limitations, offering reliable performance, secure data handling, and complete control over your automation processes.
+                  </p>
+                </div>
+
+                {/* Features Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    {
+                      icon: (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                      ),
+                      title: "24/7 Workflow Availability",
+                      description: "Automations that never sleep"
+                    },
+                    {
+                      icon: (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                      ),
+                      title: "Scalable & Reliable",
+                      description: "Built on AWS for enterprise-grade performance"
+                    },
+                    {
+                      icon: (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                      ),
+                      title: "Secure Data Handling",
+                      description: "Full control over your automation processes"
+                    },
+                    {
+                      icon: (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                        </svg>
+                      ),
+                      title: "Cost-Effective",
+                      description: "Optimized infrastructure for efficiency"
+                    }
+                  ].map((feature, index) => (
+                    <div 
+                      key={index}
+                      className="group p-4 rounded-2xl transition-all duration-300 hover:scale-105"
+                      style={{
+                        background: 'rgba(255, 255, 255, 0.05)',
+                        border: '1px solid rgba(255, 255, 255, 0.1)',
+                        backdropFilter: 'blur(10px)'
+                      }}
+                    >
+                      <div className="flex items-start space-x-3">
+                        <div 
+                          className="w-10 h-10 rounded-xl flex items-center justify-center text-white group-hover:text-red-400 transition-colors duration-300"
+                          style={{
+                            background: 'rgba(255, 59, 48, 0.1)',
+                            border: '1px solid rgba(255, 59, 48, 0.3)'
+                          }}
+                        >
+                          {feature.icon}
+                        </div>
+                        <div>
+                          <h4 
+                            className="text-lg font-semibold text-white mb-1"
+                            style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}
+                          >
+                            {feature.title}
+                          </h4>
+                          <p 
+                            className="text-sm text-white/70"
+                            style={{ fontFamily: 'var(--font-numans), sans-serif' }}
+                          >
+                            {feature.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <div className="pt-6">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link href="/book-demo">
+                      <button 
+                        className="group px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 hover:scale-105 relative overflow-hidden"
+                        style={{
+                          background: '#FF3B30',
+                          color: 'white',
+                          fontFamily: 'var(--font-dm-sans), sans-serif'
+                        }}
+                      >
+                        <span className="relative z-10">Learn More</span>
+                        <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image Section */}
+              <div className="relative">
+                <div className="relative rounded-3xl overflow-hidden" style={{
+                  background: 'linear-gradient(135deg, rgba(255, 59, 48, 0.1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.95) 100%)',
+                  border: '2px solid rgba(255, 255, 255, 0.1)',
+                  backdropFilter: 'blur(15px)',
+                  boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                }}>
+                  <Image 
+                    src="/AWSS.png" 
+                    alt="AWS Automation Infrastructure" 
+                    width={800}
+                    height={600}
+                    className="w-full h-auto rounded-3xl"
+                    style={{ filter: 'brightness(1.1) contrast(1.05)' }}
+                  />
+                  
+                  {/* Floating Elements */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 rounded-full animate-pulse" style={{ background: '#FF3B30' }}></div>
+                  <div className="absolute -bottom-4 -left-4 w-6 h-6 rounded-full animate-bounce" style={{ background: '#8B5CF6', animationDelay: '1s' }}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 sm:py-20 lg:py-24" style={{ backgroundColor: '#000000' }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
