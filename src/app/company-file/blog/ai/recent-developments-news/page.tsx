@@ -75,18 +75,18 @@ const BlogPost = () => {
                 Stay updated with the latest breakthroughs and industry updates.
               </p>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🚀 Breaking News in AI + Blockchain</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Breaking News in AI + Blockchain</h2>
               
               <p>
                 The AI + Blockchain space is moving at lightning speed! Let&apos;s catch up on the latest 
                 developments that are shaping the future of these technologies.
               </p>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🔬 Major Breakthroughs</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Major Breakthroughs</h2>
               
               <div className="space-y-6 my-8">
                 <div className="bg-blue-900/20 border-l-4 border-blue-500 pl-6 py-4">
-                  <h4 className="text-lg font-semibold text-blue-300 mb-2">🧠 AI-Powered Smart Contracts</h4>
+                  <h4 className="text-lg font-semibold text-blue-300 mb-2">AI-Powered Smart Contracts</h4>
                   <p className="text-gray-300">
                     Researchers have developed AI systems that can automatically write, audit, and optimize 
                     smart contracts, reducing errors by 80% and development time by 60%.
@@ -94,7 +94,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-green-900/20 border-l-4 border-green-500 pl-6 py-4">
-                  <h4 className="text-lg font-semibold text-green-300 mb-2">⚡ Layer 2 Scaling Solutions</h4>
+                  <h4 className="text-lg font-semibold text-green-300 mb-2">Layer 2 Scaling Solutions</h4>
                   <p className="text-gray-300">
                     New blockchain scaling solutions are achieving 100,000+ transactions per second while 
                     maintaining security, making AI applications on blockchain much more practical.
@@ -102,7 +102,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-purple-900/20 border-l-4 border-purple-500 pl-6 py-4">
-                  <h4 className="text-lg font-semibold text-purple-300 mb-2">🔒 Privacy-Preserving AI</h4>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-2">Privacy-Preserving AI</h4>
                   <p className="text-gray-300">
                     Zero-knowledge proofs combined with AI are enabling machine learning on encrypted data, 
                     opening new possibilities for healthcare and finance applications.
@@ -110,11 +110,11 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🏢 Corporate Adoption News</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Corporate Adoption News</h2>
               
               <div className="grid md:grid-cols-2 gap-6 my-8">
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-blue-300 mb-3">🏥 Healthcare Giants</h4>
+                  <h4 className="text-lg font-semibold text-blue-300 mb-3">Healthcare Giants</h4>
                   <p className="text-sm text-gray-300">
                     Major hospitals are implementing AI + Blockchain systems for patient data management, 
                     with 40% improvement in data accuracy and 30% reduction in administrative costs.
@@ -122,7 +122,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-green-300 mb-3">🏦 Banking Revolution</h4>
+                  <h4 className="text-lg font-semibold text-green-300 mb-3">Banking Revolution</h4>
                   <p className="text-sm text-gray-300">
                     Top 10 global banks are testing AI-powered blockchain systems for fraud detection, 
                     achieving 95% accuracy in identifying suspicious transactions.
@@ -130,7 +130,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
-                                     <h4 className="text-lg font-semibold text-purple-300 mb-3">📦 Supply Chain Leaders</h4>
+                                     <h4 className="text-lg font-semibold text-purple-300 mb-3">Supply Chain Leaders</h4>
                   <p className="text-sm text-gray-300">
                     Fortune 500 companies are deploying AI + Blockchain solutions, reducing supply chain 
                     costs by 25% and improving traceability by 90%.
@@ -138,7 +138,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gray-900/60 border border-gray-700 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-red-300 mb-3">🎯 Retail Innovation</h4>
+                  <h4 className="text-lg font-semibold text-red-300 mb-3">Retail Innovation</h4>
                   <p className="text-sm text-gray-300">
                     Major retailers are using AI + Blockchain for inventory management, achieving 40% 
                     reduction in stockouts and 35% improvement in demand forecasting.
@@ -146,11 +146,11 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">🌍 Government and Regulatory Updates</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Government and Regulatory Updates</h2>
               
               <div className="space-y-4 my-8">
                 <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-blue-300 mb-3">🇺🇸 US Regulatory Framework</h4>
+                  <h4 className="text-lg font-semibold text-blue-300 mb-3">US Regulatory Framework</h4>
                   <p className="text-gray-300">
                     The US government has announced new guidelines for AI + Blockchain applications, 
                     providing clarity for businesses and encouraging innovation while ensuring security.
@@ -158,7 +158,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gradient-to-r from-green-900/20 to-teal-900/20 border border-green-500/30 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-green-300 mb-3">🇪🇺 EU Digital Innovation</h4>
+                  <h4 className="text-lg font-semibold text-green-300 mb-3">EU Digital Strategy</h4>
                   <p className="text-gray-300">
                     The European Union has launched a €2 billion initiative to support AI + Blockchain 
                     projects, focusing on healthcare, finance, and environmental applications.
@@ -166,7 +166,7 @@ const BlogPost = () => {
                 </div>
                 
                 <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-lg p-6">
-                  <h4 className="text-lg font-semibold text-purple-300 mb-3">🌏 Asian Innovation Hubs</h4>
+                  <h4 className="text-lg font-semibold text-purple-300 mb-3">Asian Innovation Hubs</h4>
                   <p className="text-gray-300">
                     Singapore, Japan, and South Korea have established regulatory sandboxes for AI + 
                     Blockchain testing, attracting billions in investment and innovation.
@@ -174,7 +174,7 @@ const BlogPost = () => {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mt-10 mb-6">📊 Investment and Market Trends</h2>
+              <h2 className="text-3xl font-bold text-white mt-10 mb-6">Investment and Market Trends</h2>
               
               <p>
                 The market is showing strong growth and investor confidence:
