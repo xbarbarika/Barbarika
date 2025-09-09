@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Navbar from "@/components/Navbar";
 import StatsSection from "@/components/StatsSection";
 import CTABanner from "@/components/CTABanner";
 import PhotoGallery from "@/components/PhotoGallery";
@@ -84,13 +85,17 @@ const EventsPage = () => {
           }
         }
       `}</style>
+      
+      {/* Navbar */}
+      <Navbar />
+      
       {/* Skip Links */}
       <div className="sr-only">
         <a href="#main-content" className="skip-link">Skip to Content</a>
       </div>
 
       {/* Hero Section */}
-      <main id="main-content" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <main id="main-content" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         {/* Background Images with Rotation */}
         <div className="absolute inset-0">
           {backgroundImages.map((bgImage, index) => (
