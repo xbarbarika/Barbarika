@@ -16,6 +16,7 @@ const menuItems = [
   { label: 'Services'},
   { label: 'Company' },
   { label: 'Pricing' },
+  { label: 'Events', href: '/events' },
 ];
 
 const companyDropdown = [
@@ -220,6 +221,10 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
                   <span className="capitalize">{item.label}</span>
                 </Link>
               )
+            ) : item.label === 'Events' && item.href ? (
+              <Link href={item.href}>
+                <span className="capitalize">{item.label}</span>
+              </Link>
             ) : (
               <span className="capitalize">{item.label}</span>
             )}
