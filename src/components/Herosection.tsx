@@ -165,18 +165,39 @@ export default function HeroSection() {
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden z-0 opacity-50">
-        {[...Array(20)].map((_, i) => (
+        {[
+          { width: 8.26, height: 5.76, left: 93.35, top: 22.34, color: '202, 34, 234', opacity: 0.44, duration: 11.34, delay: 3.21 },
+          { width: 6.91, height: 7.80, left: 19.42, top: 53.35, color: '202, 34, 234', opacity: 0.30, duration: 13.50, delay: 2.96 },
+          { width: 12.45, height: 8.92, left: 67.23, top: 15.67, color: '255, 143, 78', opacity: 0.35, duration: 9.87, delay: 1.45 },
+          { width: 7.33, height: 9.18, left: 45.12, top: 78.91, color: '202, 34, 234', opacity: 0.28, duration: 14.23, delay: 4.12 },
+          { width: 9.67, height: 6.54, left: 82.45, top: 65.23, color: '255, 143, 78', opacity: 0.42, duration: 8.76, delay: 0.89 },
+          { width: 5.89, height: 11.23, left: 23.67, top: 41.56, color: '202, 34, 234', opacity: 0.31, duration: 12.45, delay: 2.34 },
+          { width: 10.12, height: 7.89, left: 56.78, top: 29.45, color: '255, 143, 78', opacity: 0.38, duration: 10.67, delay: 1.78 },
+          { width: 8.45, height: 9.67, left: 89.12, top: 71.23, color: '202, 34, 234', opacity: 0.33, duration: 11.89, delay: 3.45 },
+          { width: 6.78, height: 8.34, left: 34.56, top: 87.12, color: '255, 143, 78', opacity: 0.29, duration: 13.12, delay: 2.67 },
+          { width: 11.23, height: 6.78, left: 76.89, top: 38.45, color: '202, 34, 234', opacity: 0.36, duration: 9.34, delay: 1.23 },
+          { width: 7.56, height: 10.45, left: 12.34, top: 62.78, color: '255, 143, 78', opacity: 0.41, duration: 12.78, delay: 3.89 },
+          { width: 9.23, height: 8.12, left: 58.67, top: 16.34, color: '202, 34, 234', opacity: 0.27, duration: 14.56, delay: 2.12 },
+          { width: 8.67, height: 7.45, left: 91.23, top: 84.67, color: '255, 143, 78', opacity: 0.39, duration: 10.23, delay: 1.56 },
+          { width: 6.34, height: 9.89, left: 41.78, top: 45.23, color: '202, 34, 234', opacity: 0.32, duration: 13.67, delay: 4.23 },
+          { width: 10.78, height: 6.23, left: 73.45, top: 52.89, color: '255, 143, 78', opacity: 0.37, duration: 8.45, delay: 0.67 },
+          { width: 7.89, height: 11.12, left: 25.67, top: 73.45, color: '202, 34, 234', opacity: 0.30, duration: 12.34, delay: 2.89 },
+          { width: 9.45, height: 7.67, left: 64.12, top: 31.78, color: '255, 143, 78', opacity: 0.35, duration: 11.45, delay: 1.34 },
+          { width: 8.12, height: 8.89, left: 87.56, top: 59.12, color: '202, 34, 234', opacity: 0.28, duration: 13.89, delay: 3.67 },
+          { width: 6.67, height: 9.34, left: 38.23, top: 26.67, color: '255, 143, 78', opacity: 0.43, duration: 9.78, delay: 1.89 },
+          { width: 11.67, height: 7.23, left: 69.78, top: 81.45, color: '202, 34, 234', opacity: 0.34, duration: 10.89, delay: 2.45 }
+        ].map((element, i) => (
           <div 
             key={i}
             className="absolute rounded-full"
             style={{
-              width: `${Math.random() * 10 + 5}px`,
-              height: `${Math.random() * 10 + 5}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              background: `rgba(${Math.random() > 0.5 ? '255, 143, 78' : '202, 34, 234'}, ${Math.random() * 0.3 + 0.2})`,
-              animation: `float ${Math.random() * 10 + 10}s linear infinite`,
-              animationDelay: `${Math.random() * 5}s`,
+              width: `${element.width}px`,
+              height: `${element.height}px`,
+              left: `${element.left}%`,
+              top: `${element.top}%`,
+              background: `rgba(${element.color}, ${element.opacity})`,
+              animation: `float ${element.duration}s linear infinite`,
+              animationDelay: `${element.delay}s`,
               opacity: 0.7
             }}
           ></div>
