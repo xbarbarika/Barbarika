@@ -179,8 +179,7 @@ const EventsPage = () => {
       {/* Stats Section */}
       <StatsSection />
 
-      {/* CTA Banner */}
-      <CTABanner />
+      
 
       {/* Photo Gallery */}
       <PhotoGallery />
