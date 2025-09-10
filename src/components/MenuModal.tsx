@@ -217,6 +217,19 @@ const MenuModal: React.FC<MenuModalProps> = ({ isOpen, onClose }) => {
                 Pricing
               </span>
             </button>
+
+            {/* Events Link */}
+            <Link href="/events" onClick={handleClose}>
+              <div className={`group flex items-center justify-between p-3 sm:p-4 rounded-xl transition-all duration-200 ${
+                pathname === '/events' ? 'bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30' : 'hover:bg-white/5'
+              }`}>
+                <span className={`text-base sm:text-lg font-medium transition-colors ${
+                  pathname === '/events' ? 'text-pink-400' : 'text-white group-hover:text-pink-400'
+                }`} style={{ fontFamily: 'Inter, sans-serif' }}>
+                  Events
+                </span>
+              </div>
+            </Link>
           </nav>
 
           {/* CTA Section - Always visible at bottom */}
