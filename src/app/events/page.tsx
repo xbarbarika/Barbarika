@@ -6,6 +6,7 @@ import StatsSection from "@/components/StatsSection";
 import CTABanner from "@/components/CTABanner";
 import PhotoGallery from "@/components/PhotoGallery";
 import EventsList from "@/components/EventsList";
+import { ParticleTextEffect } from "@/components/ui/particle-text-effect";
 
 export interface EventType {
   id: number;
@@ -122,37 +123,12 @@ const EventsPage = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight"
-              style={{
-                fontFamily: 'var(--font-tourney), sans-serif',
-                fontWeight: 400,
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                textShadow: '0 4px 20px rgba(0,0,0,0.8)',
-                position: 'relative',
-                display: 'inline-block',
-                padding: '1rem 2rem',
-                border: '3px solid #FF3B30',
-                borderRadius: '1rem',
-                background: 'rgba(0, 0, 0, 0.3)',
-                backdropFilter: 'blur(10px)'
-              }}>
-            BARBARIKA&apos;S EXCLUSIVE<br />
-            <span className="text-4xl md:text-6xl mt-4 block" style={{ color: '#FF3B30' }}>
-              INVESTOR EVENTS
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed"
-             style={{
-               fontFamily: 'var(--font-numans), sans-serif',
-               lineHeight: '1.6',
-               textShadow: '0 2px 4px rgba(0,0,0,0.8)',
-               fontWeight: 400
-             }}>
-            An exclusive series of events designed to provide Web3 brands with monthly, 
-            consistent exposure to the top founders & top investors all around the world.
-          </p>
+          <div className="mb-8">
+            <ParticleTextEffect words={[
+              "BARBARIKA'S EXCLUSIVE",
+              "INVESTOR EVENTS"
+            ]} />
+          </div>
           
           <button 
             className="px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-110 hover:bg-red-500 hover:border-red-500 backdrop-blur-sm hover:shadow-2xl hover:shadow-red-500/25"
@@ -189,7 +165,7 @@ const EventsPage = () => {
         <div className="max-w-7xl mx-auto">
 
           {/* Events List */}
-          <EventsList events={events} />
+          <EventsList events={events} useGlassCards={true} />
 
           {/* Load More */}
           <div className="text-center mt-12">

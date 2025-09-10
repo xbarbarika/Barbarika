@@ -5,6 +5,7 @@ import MenuModal from '@/components/MenuModal';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
+import { GlowCard } from '@/components/ui/spotlight-card';
 
 export default function GenAIService() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -166,77 +167,59 @@ export default function GenAIService() {
             </p>
           </div>
 
-          {/* Services Grid */}
+          {/* Services Grid with GlowCard */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
                 title: 'Model Validation & Fact Checking',
                 description: 'Our data experts review your model&apos;s responses for accuracy, identify errors, and rewrite responses to improve performance.',
-                features: ['Response accuracy validation', 'Error identification', 'Automated workflow', 'Quality assurance']
+                features: ['Response accuracy validation', 'Error identification', 'Automated workflow', 'Quality assurance'],
+                glowColor: 'red' as const
               },
               {
                 title: 'Instruction Following',
                 description: 'Assess how well your Gen AI model understands, interprets, and executes instructions with compliance analysis.',
-                features: ['Compliance assessment', 'Response analysis', 'Model optimization', 'Detailed reporting']
+                features: ['Compliance assessment', 'Response analysis', 'Model optimization', 'Detailed reporting'],
+                glowColor: 'purple' as const
               },
               {
                 title: 'Preference Ranking',
                 description: 'Improve model output quality through feedback loops and RLHF with domain expertise across industries.',
-                features: ['Quality ranking', 'RLHF implementation', 'Domain expertise', 'Feedback optimization']
+                features: ['Quality ranking', 'RLHF implementation', 'Domain expertise', 'Feedback optimization'],
+                glowColor: 'green' as const
               },
               {
                 title: 'Content Generation & Captioning',
                 description: 'Scale captioning for various modalities with accuracy verification and hallucination prevention.',
-                features: ['Multi-modal captioning', 'Content verification', 'Error reduction', 'Hallucination prevention']
+                features: ['Multi-modal captioning', 'Content verification', 'Error reduction', 'Hallucination prevention'],
+                glowColor: 'blue' as const
               },
               {
                 title: 'Creative Writing & Prompt Engineering',
                 description: 'Create new prompts and responses with chain-of-thought reasoning for clear rationale.',
-                features: ['Custom prompts', 'Response optimization', 'Chain-of-thought', 'Domain content']
+                features: ['Custom prompts', 'Response optimization', 'Chain-of-thought', 'Domain content'],
+                glowColor: 'orange' as const
               },
               {
                 title: 'Synthetic Data Creation',
                 description: 'Create synthetic datasets with human-in-the-loop approach for highest quality and accuracy.',
-                features: ['Custom datasets', 'Quality validation', 'Domain generation', 'Human oversight']
+                features: ['Custom datasets', 'Quality validation', 'Domain generation', 'Human oversight'],
+                glowColor: 'red' as const
               }
             ].map((service, index) => {
               const isActive = index < 2; // Mark first 2 services as active
               
-              // Define marketing-style gradient backgrounds for each card
-              const cardBackgrounds = [
-                'linear-gradient(135deg, rgba(255, 59, 48, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Red to dark
-                'linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Purple to dark
-                'linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Green to dark
-                'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Blue to dark
-                'linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Orange to dark
-                'linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Pink to dark
-              ];
-              
-              const hoverGradients = [
-                'linear-gradient(135deg, rgba(255, 59, 48, 0.2) 0%, rgba(255, 59, 48, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-                'linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-                'linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-                'linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-                'linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-                'linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(236, 72, 153, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-              ];
-              
               return (
-                <div
+                <GlowCard
                   key={index}
-                  className="group relative rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer overflow-hidden"
-                  style={{
-                    background: cardBackgrounds[index % cardBackgrounds.length],
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    backdropFilter: 'blur(15px)',
-                    minHeight: '300px',
-                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
-                  }}
+                  glowColor={service.glowColor}
+                  customSize={true}
+                  className="w-full h-auto min-h-[350px] cursor-pointer group relative overflow-hidden"
                 >
                   {/* Active Badge */}
                   {isActive && (
                     <div 
-                      className="absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-semibold"
+                      className="absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-semibold z-20"
                       style={{
                         background: '#FF3B30',
                         color: 'white',
@@ -247,16 +230,8 @@ export default function GenAIService() {
                     </div>
                   )}
                   
-                  {/* Hover Effects */}
-                  <div 
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
-                    style={{
-                      background: hoverGradients[index % hoverGradients.length]
-                    }}
-                  />
-                  
                   {/* Content */}
-                  <div className="relative z-10 h-full flex flex-col">
+                  <div className="relative z-10 h-full flex flex-col p-2">
                     {/* Icon */}
                     <div className="mb-4">
                       <div 
@@ -320,7 +295,7 @@ export default function GenAIService() {
                       )}
                     </div>
                   </div>
-                </div>
+                </GlowCard>
               );
             })}
           </div>
