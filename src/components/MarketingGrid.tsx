@@ -116,14 +116,11 @@ const MarketingGrid = () => {
           @media (max-width: 767px) {
             .marketing-grid-scroll {
               display: flex;
-              overflow-x: auto;
-              padding: 0.25rem 0.25rem;
-              margin: 0 -0.5rem;
-              scroll-snap-type: x mandatory;
-              -webkit-overflow-scrolling: touch;
-              scroll-behavior: smooth;
-              overscroll-behavior-x: contain;
-              scroll-snap-stop: always;
+              overflow: visible;
+              padding: 1rem 0;
+              margin: 0;
+              width: 100%;
+              position: relative;
             }
             
             .marketing-grid {
@@ -480,7 +477,7 @@ const MarketingGrid = () => {
           }
           
           .marketing-card:hover {
-            transform: translateY(-4px) rotateX(1deg) rotateY(1deg) scale(1.02) !important;
+            transform: translateY(-8px) rotateX(1deg) rotateY(1deg) scale(1.02) !important;
             box-shadow: 
               0 20px 60px rgba(255, 59, 48, 0.2),
               0 0 0 1px rgba(255, 59, 48, 0.3),
@@ -580,20 +577,30 @@ const MarketingGrid = () => {
           }
           
           .animate-scroll {
-            animation: scroll 60s linear infinite;
-            padding: 0 2rem;
+            animation: scroll 20s linear infinite;
+            display: flex;
+            gap: 1rem;
+            width: fit-content;
           }
           
           .animate-scroll:hover {
             animation-play-state: paused;
           }
           
+          /* Mobile animation adjustments */
+          @media (max-width: 767px) {
+            .animate-scroll {
+              animation: scroll 15s linear infinite;
+              gap: 0.5rem;
+            }
+          }
+          
           /* Container overflow management */
           .relative.overflow-hidden {
             overflow-x: hidden !important;
             overflow-y: visible !important;
-            padding-top: 1rem !important;
-            padding-bottom: 2rem !important;
+            padding-top: 2rem !important;
+            padding-bottom: 3rem !important;
           }
           
           /* Ensure cards don't overflow container */
@@ -672,20 +679,17 @@ const MarketingGrid = () => {
             </h1>
           </div>
         </div>
-        <div className="relative w-full mt-8 sm:mt-12 lg:mt-16 px-0">
+        <div className="relative w-full mt-8 sm:mt-12 lg:mt-16 px-0" style={{ overflow: 'hidden', paddingTop: '2rem', paddingBottom: '3rem' }}>
           <div 
-            className="marketing-grid-scroll flex" 
+            className="marketing-grid-scroll" 
             style={{ 
-              WebkitOverflowScrolling: 'touch',
-              scrollBehavior: 'smooth',
-              scrollSnapType: 'x mandatory',
-              scrollPadding: '0 1rem',
-              overflowX: 'auto',
-              overflowY: 'hidden',
-              msOverflowStyle: 'none',
-              scrollbarWidth: 'none'
+              width: '100%',
+              height: 'auto',
+              overflow: 'visible',
+              position: 'relative'
             }}
           >
+            <div className="animate-scroll flex">
             {/* First set of cards */}
             {services.map((service, index) => (
             <div
@@ -918,6 +922,7 @@ const MarketingGrid = () => {
               </div>
             </div>
           ))}
+            </div>
           </div>
         </div>
         </div>
