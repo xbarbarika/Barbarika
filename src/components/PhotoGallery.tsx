@@ -5,18 +5,18 @@ import Image from "next/image";
 const PhotoGallery = () => {
   // Using high-quality placeholder images for the gallery
   const galleryImages = [
-    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&h=600&q=80",
+    "/event4.jpg",
     "https://images.unsplash.com/photo-1559223607-a43c990c692c?auto=format&fit=crop&w=800&h=600&q=80", 
-    "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&h=600&q=80",
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&h=600&q=80",
-    "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&h=600&q=80",
-    "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&h=600&q=80",
+    "/event1.jpg",
+    "/event3.jpg",
+    "/event6.jpg",
+    "/event10.jpg",
     "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&h=600&q=80",
-    "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&h=600&q=80",
-    "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&h=600&q=80",
-    "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=800&h=600&q=80",
-    "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&h=600&q=80",
-    "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&h=600&q=80"
+    "/event2.jpg",
+    "/event7.jpg",
+    "/event9.jpg",
+    "/event11.jpg",
+    "/event12.jpg"
   ];
 
   return (

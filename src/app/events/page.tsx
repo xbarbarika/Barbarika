@@ -112,12 +112,6 @@ const EventsPage = () => {
           ))}
           <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/80"></div>
           <div className="absolute top-0 right-0 w-1/2 h-full opacity-10">
-            <div className="text-right pt-20 pr-20">
-              <h2 className="text-6xl font-bold text-white/20 tracking-widest transform rotate-12"
-                  style={{ fontFamily: 'var(--font-tourney), sans-serif' }}>
-                BARBARIKA
-              </h2>
-            </div>
           </div>
         </div>
 
