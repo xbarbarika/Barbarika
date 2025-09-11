@@ -115,7 +115,7 @@ const MarketingGrid = () => {
           /* Mobile devices (portrait and landscape) */
           @media (max-width: 767px) {
             .marketing-grid-scroll {
-              display: flex;
+              display: block;
               overflow: visible;
               padding: 1rem 0;
               margin: 0;
@@ -124,26 +124,24 @@ const MarketingGrid = () => {
             }
             
             .marketing-grid {
-              display: flex;
-              flex-wrap: nowrap;
-              padding: 0.1rem 0.25rem 0.25rem;
-              gap: 0.4rem;
-              width: max-content;
-              min-width: 100%;
-              scroll-snap-type: x mandatory;
+              display: grid;
+              grid-template-columns: 1fr;
+              padding: 0.5rem;
+              gap: 1rem;
+              width: 100%;
+              max-width: 100%;
             }
             
             .marketing-card {
-              width: 90vw !important;
-              min-width: 90vw !important;
-              max-width: 90vw !important;
+              width: 100% !important;
+              min-width: 100% !important;
+              max-width: 100% !important;
               min-height: 200px !important;
               border-radius: 12px !important;
-              scroll-snap-align: center;
               flex-shrink: 0;
-              margin: 0 0.1rem;
+              margin: 0;
               transition: transform 0.2s ease, box-shadow 0.2s ease;
-              padding: 0.5rem !important;
+              padding: 1rem !important;
             }
             
             .marketing-card:active {
@@ -152,10 +150,6 @@ const MarketingGrid = () => {
             .marketing-title {
               font-size: 16px !important;
               margin-bottom: 20px !important;
-            }
-            .marketing-grid {
-              column-gap: 10px !important;
-              row-gap: 14px !important;
             }
             .marketing-grid-container {
               padding-top: 16px !important;
@@ -170,19 +164,30 @@ const MarketingGrid = () => {
               width: 16px !important;
               height: 16px !important;
             }
+            
+            /* Disable horizontal scroll animation on mobile */
+            .animate-scroll {
+              animation: none !important;
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              width: 100%;
+            }
           }
 
           /* Small mobile devices */
           @media (min-width: 376px) and (max-width: 480px) {
+            .marketing-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              padding: 0.5rem;
+            }
             .marketing-card {
               width: 100% !important;
               max-width: 100% !important;
               min-height: 190px !important;
               border-radius: 13px !important;
-            }
-            .marketing-grid {
-              column-gap: 12px !important;
-              row-gap: 16px !important;
             }
             .marketing-title {
               font-size: 18px !important;
@@ -199,19 +204,28 @@ const MarketingGrid = () => {
               width: 18px !important;
               height: 18px !important;
             }
+            .animate-scroll {
+              animation: none !important;
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              width: 100%;
+            }
           }
 
           /* Medium mobile devices */
           @media (min-width: 481px) and (max-width: 640px) {
+            .marketing-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              padding: 0.5rem;
+            }
             .marketing-card {
               width: 100% !important;
               max-width: 100% !important;
               min-height: 200px !important;
               border-radius: 14px !important;
-            }
-            .marketing-grid {
-              column-gap: 12px !important;
-              row-gap: 16px !important;
             }
             .marketing-title {
               font-size: 20px !important;
@@ -228,19 +242,28 @@ const MarketingGrid = () => {
               width: 20px !important;
               height: 20px !important;
             }
+            .animate-scroll {
+              animation: none !important;
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              width: 100%;
+            }
           }
 
           /* Large mobile devices */
           @media (min-width: 641px) and (max-width: 767px) {
+            .marketing-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1.25rem;
+              padding: 0.5rem;
+            }
             .marketing-card {
               width: 100% !important;
               max-width: 100% !important;
               min-height: 220px !important;
               border-radius: 15px !important;
-            }
-            .marketing-grid {
-              column-gap: 15px !important;
-              row-gap: 20px !important;
             }
             .marketing-title {
               font-size: 22px !important;
@@ -256,6 +279,13 @@ const MarketingGrid = () => {
             .service-icon {
               width: 22px !important;
               height: 22px !important;
+            }
+            .animate-scroll {
+              animation: none !important;
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1.25rem;
+              width: 100%;
             }
           }
 
@@ -590,8 +620,11 @@ const MarketingGrid = () => {
           /* Mobile animation adjustments */
           @media (max-width: 767px) {
             .animate-scroll {
-              animation: scroll 15s linear infinite;
-              gap: 0.5rem;
+              animation: none !important;
+              display: grid !important;
+              grid-template-columns: 1fr !important;
+              gap: 1rem !important;
+              width: 100% !important;
             }
           }
           
