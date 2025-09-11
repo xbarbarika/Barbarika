@@ -12,11 +12,11 @@ const PhotoGallery = () => {
     "/event6.jpg",
     "/event10.jpg",
     "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&h=600&q=80",
+    "/event8.jpg",
     "/event2.jpg",
     "/event7.jpg",
     "/event9.jpg",
-    "/event11.jpg",
-    "/event12.jpg"
+    "/event11.jpg"
   ];
 
   return (
@@ -28,9 +28,9 @@ const PhotoGallery = () => {
             <div 
               key={index}
               className={`relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 ${
-                index === 0 || index === 5 || index === 8 ? 'md:col-span-2 md:row-span-2' : ''
+                index === 0 || index === 5 || index === 9 ? 'md:col-span-2 md:row-span-2' : ''
               } ${
-                index === 2 || index === 7 ? 'md:row-span-2' : ''
+                index === 2 || index === 7 || index === 8 ? 'md:row-span-2' : ''
               }`}
               style={{
                 border: '1px solid rgba(255, 59, 48, 0.2)',

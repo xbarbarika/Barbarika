@@ -20,8 +20,12 @@ export default function Home() {
       {/* Download Roadmap Section */}
       {/* Removed as per user request */}
       
-      <MarketingGrid />
-      <LocationsSection />
+      <div className="relative">
+        <MarketingGrid />
+        <div className="mobile-spacing">
+          <LocationsSection />
+        </div>
+      </div>
       <PricingPlans />
       <FaqSection />
       <Footer />

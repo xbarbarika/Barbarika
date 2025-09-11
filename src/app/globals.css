@@ -868,6 +868,13 @@ body {
   }
 }
 
+/* Mobile spacing adjustments */
+@media (max-width: 767px) {
+  .mobile-spacing {
+    margin-top: -2rem !important;
+  }
+}
+
 /* MarketingGrid landscape fixes */
 @media (orientation: landscape) and (max-height: 600px) {
   .marketing-grid-container {

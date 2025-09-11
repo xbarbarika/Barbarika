@@ -95,24 +95,75 @@ const MarketingGrid = () => {
     <>
       <style dangerouslySetInnerHTML={{
         __html: `
-          /* iPhone SE and very small devices */
-          @media (max-width: 375px) {
-            .marketing-card {
-              width: 100% !important;
-              max-width: 100% !important;
-              min-height: 180px !important;
-              border-radius: 12px !important;
+          /* Base styles for horizontal scroll container */
+          .marketing-grid-scroll {
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 0 1rem;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+          }
+          
+          /* Hide scrollbar for cleaner look but keep functionality */
+          .marketing-grid-scroll::-webkit-scrollbar {
+            display: none;
+            width: 0;
+            height: 0;
+          }
+          
+          /* Mobile devices (portrait and landscape) */
+          @media (max-width: 767px) {
+            .marketing-grid-scroll {
+              display: flex;
+              overflow-x: auto;
+              padding: 0.25rem 0.25rem;
+              margin: 0 -0.5rem;
+              scroll-snap-type: x mandatory;
+              -webkit-overflow-scrolling: touch;
+              scroll-behavior: smooth;
+              overscroll-behavior-x: contain;
+              scroll-snap-stop: always;
             }
+            
             .marketing-grid {
-              column-gap: 10px !important;
-              row-gap: 14px !important;
+              display: flex;
+              flex-wrap: nowrap;
+              padding: 0.1rem 0.25rem 0.25rem;
+              gap: 0.4rem;
+              width: max-content;
+              min-width: 100%;
+              scroll-snap-type: x mandatory;
+            }
+            
+            .marketing-card {
+              width: 90vw !important;
+              min-width: 90vw !important;
+              max-width: 90vw !important;
+              min-height: 200px !important;
+              border-radius: 12px !important;
+              scroll-snap-align: center;
+              flex-shrink: 0;
+              margin: 0 0.1rem;
+              transition: transform 0.2s ease, box-shadow 0.2s ease;
+              padding: 0.5rem !important;
+            }
+            
+            .marketing-card:active {
+              transform: scale(0.98);
             }
             .marketing-title {
               font-size: 16px !important;
               margin-bottom: 20px !important;
             }
+            .marketing-grid {
+              column-gap: 10px !important;
+              row-gap: 14px !important;
+            }
             .marketing-grid-container {
-              padding-top: 24px !important;
+              padding-top: 16px !important;
+              padding-bottom: 8px !important;
+              margin-bottom: 0 !important;
             }
             .department-badge {
               font-size: 10px !important;
@@ -216,7 +267,10 @@ const MarketingGrid = () => {
             .marketing-grid {
               column-gap: 18px !important;
               row-gap: 24px !important;
-            }
+              scroll-snap-type: x mandatory;
+              scroll-padding: 0 1rem;
+              -webkit-overflow-scrolling: touch;
+          }
           }
           /* Desktop devices */
           @media (min-width: 1024px) {
@@ -232,7 +286,10 @@ const MarketingGrid = () => {
             .marketing-grid {
               column-gap: 22px !important;
               row-gap: 32px !important;
-            }
+              scroll-snap-type: x mandatory;
+              scroll-padding: 0 1.5rem;
+              -webkit-overflow-scrolling: touch;
+          }
             .department-badge {
               width: auto !important;
               height: auto !important;
@@ -615,13 +672,25 @@ const MarketingGrid = () => {
             </h1>
           </div>
         </div>
-        <div className="relative overflow-hidden w-full mt-8 sm:mt-12 lg:mt-16" style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>
-          <div className="flex animate-scroll" style={{ gap: '1.5rem' }}>
+        <div className="relative w-full mt-8 sm:mt-12 lg:mt-16 px-0">
+          <div 
+            className="marketing-grid-scroll flex" 
+            style={{ 
+              WebkitOverflowScrolling: 'touch',
+              scrollBehavior: 'smooth',
+              scrollSnapType: 'x mandatory',
+              scrollPadding: '0 1rem',
+              overflowX: 'auto',
+              overflowY: 'hidden',
+              msOverflowStyle: 'none',
+              scrollbarWidth: 'none'
+            }}
+          >
             {/* First set of cards */}
             {services.map((service, index) => (
             <div
               key={`first-${index}`}
-              className={`flex-shrink-0 w-80 mx-2 p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 transition-all duration-300 marketing-card landscape-card-height ${
+              className={`flex-shrink-0 w-80 p-3 sm:p-4 md:p-5 lg:p-6 transition-all duration-300 marketing-card landscape-card-height ${
                 service.active
                   ? "bg-gradient-to-br from-red-900/20 to-red-900/40 text-white shadow-xl border-2 border-red-500/50"
                   : "hover:shadow-lg hover:scale-105"
@@ -634,7 +703,10 @@ const MarketingGrid = () => {
                 flexShrink: 0,
                 borderRadius: '14px',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                scrollSnapAlign: 'center',
+                margin: '0 0.5rem',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
               }}
             >
               <div className="mb-2.5 xs:mb-3 sm:mb-4">
@@ -734,7 +806,7 @@ const MarketingGrid = () => {
           {services.map((service, index) => (
             <div
               key={`second-${index}`}
-              className={`flex-shrink-0 w-80 mx-2 p-2.5 xs:p-3 sm:p-4 md:p-5 lg:p-6 transition-all duration-300 marketing-card landscape-card-height ${
+              className={`flex-shrink-0 w-80 p-3 sm:p-4 md:p-5 lg:p-6 transition-all duration-300 marketing-card landscape-card-height ${
                 service.active
                   ? "bg-gradient-to-br from-red-900/20 to-red-900/40 text-white shadow-xl border-2 border-red-500/50"
                   : "hover:shadow-lg hover:scale-105"
@@ -747,7 +819,10 @@ const MarketingGrid = () => {
                 flexShrink: 0,
                 borderRadius: '14px',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                scrollSnapAlign: 'center',
+                margin: '0 0.5rem',
+                boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
               }}
             >
               <div className="mb-2.5 xs:mb-3 sm:mb-4">
