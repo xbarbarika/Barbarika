@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ThreeDPhotoCarousel } from "./PhotoCarousel";
 
 const PhotoGallery = () => {
   // Using high-quality placeholder images for the gallery
@@ -22,7 +23,20 @@ const PhotoGallery = () => {
   return (
     <section className="py-16 px-6" style={{ backgroundColor: '#000000' }}>
       <div className="max-w-7xl mx-auto">
+        {/* 3D Carousel Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
+            Our Events in 3D
+          </h2>
+          <div className="h-[500px] w-full rounded-2xl overflow-hidden">
+            <ThreeDPhotoCarousel />
+          </div>
+        </div>
+
         {/* Photo Grid */}
+        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-8">
+          Event Gallery
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {galleryImages.map((image, index) => (
             <div 
