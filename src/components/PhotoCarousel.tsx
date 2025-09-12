@@ -5,6 +5,7 @@ import {
   AnimatePresence,
   motion,
   useAnimation,
+  useAnimationControls,
   useMotionValue,
   useTransform,
 } from "framer-motion"
@@ -70,7 +71,7 @@ const Carousel = memo(
     isCarouselActive,
   }: {
     handleClick: (imgUrl: string, index: number) => void
-    controls: any
+    controls: ReturnType<typeof useAnimation>
     cards: string[]
     isCarouselActive: boolean
   }) => {
@@ -157,10 +158,12 @@ const Carousel = memo(
   }
 )
 
+Carousel.displayName = 'Carousel';
+
 function ThreeDPhotoCarousel() {
   const [activeImg, setActiveImg] = useState<string | null>(null)
   const [isCarouselActive, setIsCarouselActive] = useState(true)
-  const controls = useAnimation()
+  const controls = useAnimationControls()
   
   // Using the local images from the public directory
   const cards = useMemo(
