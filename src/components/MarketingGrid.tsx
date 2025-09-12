@@ -115,38 +115,33 @@ const MarketingGrid = () => {
           /* Mobile devices (portrait and landscape) */
           @media (max-width: 767px) {
             .marketing-grid-scroll {
-              display: flex;
-              overflow-x: auto;
-              padding: 0.25rem 0.25rem;
-              margin: 0 -0.5rem;
-              scroll-snap-type: x mandatory;
-              -webkit-overflow-scrolling: touch;
-              scroll-behavior: smooth;
-              overscroll-behavior-x: contain;
-              scroll-snap-stop: always;
+              display: block;
+              overflow: visible;
+              padding: 1rem 0;
+              margin: 0;
+              width: 100%;
+              position: relative;
             }
             
             .marketing-grid {
-              display: flex;
-              flex-wrap: nowrap;
-              padding: 0.1rem 0.25rem 0.25rem;
-              gap: 0.4rem;
-              width: max-content;
-              min-width: 100%;
-              scroll-snap-type: x mandatory;
+              display: grid;
+              grid-template-columns: 1fr;
+              padding: 0.5rem;
+              gap: 1rem;
+              width: 100%;
+              max-width: 100%;
             }
             
             .marketing-card {
-              width: 90vw !important;
-              min-width: 90vw !important;
-              max-width: 90vw !important;
+              width: 100% !important;
+              min-width: 100% !important;
+              max-width: 100% !important;
               min-height: 200px !important;
               border-radius: 12px !important;
-              scroll-snap-align: center;
               flex-shrink: 0;
-              margin: 0 0.1rem;
+              margin: 0;
               transition: transform 0.2s ease, box-shadow 0.2s ease;
-              padding: 0.5rem !important;
+              padding: 1rem !important;
             }
             
             .marketing-card:active {
@@ -155,10 +150,6 @@ const MarketingGrid = () => {
             .marketing-title {
               font-size: 16px !important;
               margin-bottom: 20px !important;
-            }
-            .marketing-grid {
-              column-gap: 10px !important;
-              row-gap: 14px !important;
             }
             .marketing-grid-container {
               padding-top: 16px !important;
@@ -173,19 +164,30 @@ const MarketingGrid = () => {
               width: 16px !important;
               height: 16px !important;
             }
+            
+            /* Disable horizontal scroll animation on mobile */
+            .animate-scroll {
+              animation: none !important;
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              width: 100%;
+            }
           }
 
           /* Small mobile devices */
           @media (min-width: 376px) and (max-width: 480px) {
+            .marketing-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              padding: 0.5rem;
+            }
             .marketing-card {
               width: 100% !important;
               max-width: 100% !important;
               min-height: 190px !important;
               border-radius: 13px !important;
-            }
-            .marketing-grid {
-              column-gap: 12px !important;
-              row-gap: 16px !important;
             }
             .marketing-title {
               font-size: 18px !important;
@@ -202,19 +204,28 @@ const MarketingGrid = () => {
               width: 18px !important;
               height: 18px !important;
             }
+            .animate-scroll {
+              animation: none !important;
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              width: 100%;
+            }
           }
 
           /* Medium mobile devices */
           @media (min-width: 481px) and (max-width: 640px) {
+            .marketing-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              padding: 0.5rem;
+            }
             .marketing-card {
               width: 100% !important;
               max-width: 100% !important;
               min-height: 200px !important;
               border-radius: 14px !important;
-            }
-            .marketing-grid {
-              column-gap: 12px !important;
-              row-gap: 16px !important;
             }
             .marketing-title {
               font-size: 20px !important;
@@ -231,19 +242,28 @@ const MarketingGrid = () => {
               width: 20px !important;
               height: 20px !important;
             }
+            .animate-scroll {
+              animation: none !important;
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1rem;
+              width: 100%;
+            }
           }
 
           /* Large mobile devices */
           @media (min-width: 641px) and (max-width: 767px) {
+            .marketing-grid {
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1.25rem;
+              padding: 0.5rem;
+            }
             .marketing-card {
               width: 100% !important;
               max-width: 100% !important;
               min-height: 220px !important;
               border-radius: 15px !important;
-            }
-            .marketing-grid {
-              column-gap: 15px !important;
-              row-gap: 20px !important;
             }
             .marketing-title {
               font-size: 22px !important;
@@ -259,6 +279,13 @@ const MarketingGrid = () => {
             .service-icon {
               width: 22px !important;
               height: 22px !important;
+            }
+            .animate-scroll {
+              animation: none !important;
+              display: grid;
+              grid-template-columns: 1fr;
+              gap: 1.25rem;
+              width: 100%;
             }
           }
 
@@ -480,7 +507,7 @@ const MarketingGrid = () => {
           }
           
           .marketing-card:hover {
-            transform: translateY(-4px) rotateX(1deg) rotateY(1deg) scale(1.02) !important;
+            transform: translateY(-8px) rotateX(1deg) rotateY(1deg) scale(1.02) !important;
             box-shadow: 
               0 20px 60px rgba(255, 59, 48, 0.2),
               0 0 0 1px rgba(255, 59, 48, 0.3),
@@ -580,20 +607,33 @@ const MarketingGrid = () => {
           }
           
           .animate-scroll {
-            animation: scroll 60s linear infinite;
-            padding: 0 2rem;
+            animation: scroll 20s linear infinite;
+            display: flex;
+            gap: 1rem;
+            width: fit-content;
           }
           
           .animate-scroll:hover {
             animation-play-state: paused;
           }
           
+          /* Mobile animation adjustments */
+          @media (max-width: 767px) {
+            .animate-scroll {
+              animation: none !important;
+              display: grid !important;
+              grid-template-columns: 1fr !important;
+              gap: 1rem !important;
+              width: 100% !important;
+            }
+          }
+          
           /* Container overflow management */
           .relative.overflow-hidden {
             overflow-x: hidden !important;
             overflow-y: visible !important;
-            padding-top: 1rem !important;
-            padding-bottom: 2rem !important;
+            padding-top: 2rem !important;
+            padding-bottom: 3rem !important;
           }
           
           /* Ensure cards don't overflow container */
@@ -672,20 +712,17 @@ const MarketingGrid = () => {
             </h1>
           </div>
         </div>
-        <div className="relative w-full mt-8 sm:mt-12 lg:mt-16 px-0">
+        <div className="relative w-full mt-8 sm:mt-12 lg:mt-16 px-0" style={{ overflow: 'hidden', paddingTop: '2rem', paddingBottom: '3rem' }}>
           <div 
-            className="marketing-grid-scroll flex" 
+            className="marketing-grid-scroll" 
             style={{ 
-              WebkitOverflowScrolling: 'touch',
-              scrollBehavior: 'smooth',
-              scrollSnapType: 'x mandatory',
-              scrollPadding: '0 1rem',
-              overflowX: 'auto',
-              overflowY: 'hidden',
-              msOverflowStyle: 'none',
-              scrollbarWidth: 'none'
+              width: '100%',
+              height: 'auto',
+              overflow: 'visible',
+              position: 'relative'
             }}
           >
+            <div className="animate-scroll flex">
             {/* First set of cards */}
             {services.map((service, index) => (
             <div
@@ -918,6 +955,7 @@ const MarketingGrid = () => {
               </div>
             </div>
           ))}
+            </div>
           </div>
         </div>
         </div>
