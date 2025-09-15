@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, DM_Sans, Shadows_Into_Light, Epilogue, Inter, Press_Start_2P, Tourney, Numans, Roboto_Condensed, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
+import ChatBot from "@/components/ChatBot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -92,6 +93,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${shadowsIntoLight.variable} ${epilogue.variable} ${inter.variable} ${pressStart2P.variable} ${tourney.variable} ${numans.variable} ${robotoCondensed.variable} ${libreBaskerville.variable} font-sans min-h-screen antialiased`}
       >
         {children}
+        <ChatBot />
       </body>
     </html>
   );
