@@ -335,84 +335,323 @@ export default function Service() {
           </div>
 
           {/* Services Grid */}
+          {activeTab === 'web3' && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-10">
+              {/* Service Box 1: Exchange Solution */}
+              <div
+                className="group relative rounded-2xl p-6 transition-all duration-500 hover:scale-[1.02] overflow-hidden"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(10, 10, 10, 0.98) 50%, rgba(0, 0, 0, 1) 100%)',
+                  border: '1px solid rgba(34, 197, 94, 0.3)',
+                  backdropFilter: 'blur(20px)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+                  animation: 'cardSlideIn 0.6s ease-out 0s both'
+                }}
+              >
+                {/* Animated Border Glow */}
+                <div 
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.3), transparent)',
+                    filter: 'blur(20px)',
+                    zIndex: 0
+                  }}
+                />
+                
+                {/* Pulsing Background Effect */}
+                <div 
+                  className="absolute inset-0 rounded-2xl opacity-20"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%)',
+                    animation: 'pulseGlow 3s ease-in-out infinite',
+                    zIndex: 0
+                  }}
+                />
+                
+                {/* Hover Gradient Overlay */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.3) 0%, rgba(34, 197, 94, 0.15) 50%, rgba(255,255,255,0.05) 100%)',
+                    zIndex: 1
+                  }}
+                />
+                
+                {/* Animated Shimmer Effect */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-2xl"
+                  style={{
+                    background: 'linear-gradient(110deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%)',
+                    backgroundSize: '200% 100%',
+                    animation: 'shimmer 2s infinite',
+                    zIndex: 1
+                  }}
+                />
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className="mb-4">
+                    <div
+                      className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-125 group-hover:rotate-6"
+                      style={{
+                        background: 'rgba(0, 0, 0, 0.5)',
+                        border: '2px solid rgba(34, 197, 94, 0.3)',
+                        backdropFilter: 'blur(10px)',
+                        boxShadow: '0 0 20px rgba(34, 197, 94, 0.4)',
+                        transition: 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)'
+                      }}
+                    >
+                      {/* Exchange arrows icon */}
+                      <svg className="w-6 h-6 text-white group-hover:text-green-400 transition-all duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M4 7h11m0 0l-3-3m3 3l-3 3M20 17H9m0 0l3-3m-3 3l3 3" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-1 group-hover:translate-x-1 transition-all duration-300" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>Exchange Solution</h3>
+                  <p className="text-white/80 text-base mb-4 group-hover:text-white/95 transition-colors duration-300" style={{ fontFamily: 'var(--font-numans), sans-serif' }}>Build your own crypto exchange in just 4 weeks.</p>
+                  <p className="text-white/80 leading-relaxed mb-5 group-hover:text-white/90 transition-colors duration-300" style={{ fontFamily: 'var(--font-numans), sans-serif' }}>
+                    We can help you launch your own branded crypto exchange from scratch in less than 4 weeks (if no customizations are required). A complete white-label solution ready for global scaling.
+                  </p>
+                  <div className="space-y-2">
+                    {[
+                      'Same features as btse.com (for reference) with your own logo & design',
+                      'Spot liquidity (300+ markets) + Futures liquidity (100+)',
+                      'Custody Solution included (Fireblocks)',
+                      'KYT / On-chain monitoring (Chainalysis, Coinfirm)',
+                      'E-KYC integration (Sumsub, Onfido)',
+                      'Premium customer support'
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2 group/item">
+                        <span className="mt-1 inline-block w-1.5 h-1.5 rounded-full transition-all duration-300 group-hover/item:scale-150" style={{ background: '#22c55e', boxShadow: '0 0 8px rgba(34, 197, 94, 0.5)' }} />
+                        <span className="text-sm text-white/80 group-hover:text-white/95 transition-colors duration-300" style={{ fontFamily: 'var(--font-numans), sans-serif' }}>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Service Box 2: Wallet Solution */}
+              <div
+                className="group relative rounded-2xl p-6 transition-all duration-500 hover:scale-[1.02] overflow-hidden"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(10, 10, 10, 0.98) 50%, rgba(0, 0, 0, 1) 100%)',
+                  border: '1px solid rgba(59, 130, 246, 0.3)',
+                  backdropFilter: 'blur(20px)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+                  animation: 'cardSlideIn 0.6s ease-out 0.1s both'
+                }}
+              >
+                {/* Animated Border Glow */}
+                <div 
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.3), transparent)',
+                    filter: 'blur(20px)',
+                    zIndex: 0
+                  }}
+                />
+                
+                {/* Pulsing Background Effect */}
+                <div 
+                  className="absolute inset-0 rounded-2xl opacity-20"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%)',
+                    animation: 'pulseGlow 3s ease-in-out infinite',
+                    zIndex: 0
+                  }}
+                />
+                
+                {/* Hover Gradient Overlay */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.15) 50%, rgba(255,255,255,0.05) 100%)',
+                    zIndex: 1
+                  }}
+                />
+                
+                {/* Animated Shimmer Effect */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-2xl"
+                  style={{
+                    background: 'linear-gradient(110deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%)',
+                    backgroundSize: '200% 100%',
+                    animation: 'shimmer 2s infinite',
+                    zIndex: 1
+                  }}
+                />
+                
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div className="mb-4">
+                    <div
+                      className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-125 group-hover:rotate-6"
+                      style={{
+                        background: 'rgba(0, 0, 0, 0.5)',
+                        border: '2px solid rgba(59, 130, 246, 0.3)',
+                        backdropFilter: 'blur(10px)',
+                        boxShadow: '0 0 20px rgba(59, 130, 246, 0.4)',
+                        transition: 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)'
+                      }}
+                    >
+                      {/* Wallet icon */}
+                      <svg className="w-6 h-6 text-white group-hover:text-blue-400 transition-all duration-500 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M3 7a2 2 0 012-2h11a2 2 0 012 2v1h-5a3 3 0 000 6h5v1a2 2 0 01-2 2H5a2 2 0 01-2-2V7z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M21 12h-6a1 1 0 010-2h6a1 1 0 010 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-1 group-hover:translate-x-1 transition-all duration-300" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>Wallet Solution</h3>
+                  <p className="text-white/80 text-base mb-4 group-hover:text-white/95 transition-colors duration-300" style={{ fontFamily: 'var(--font-numans), sans-serif' }}>Launch secure multi-chain wallets with your own brand.</p>
+                  <p className="text-white/80 leading-relaxed mb-5 group-hover:text-white/90 transition-colors duration-300" style={{ fontFamily: 'var(--font-numans), sans-serif' }}>
+                    Offer your users a secure and beautifully designed crypto wallet with full control over design, custody, and compliance — all branded as your own.
+                  </p>
+                  <div className="space-y-2">
+                    {[
+                      'White-label wallet with custom UI/UX',
+                      'Multi-chain support (EVM + non-EVM)',
+                      'Custodial & non-custodial options (Fireblocks integration)',
+                      'Real-time on-chain monitoring (Chainalysis, Coinfirm)',
+                      'Available for Web, iOS & Android',
+                      'Optional KYC integration (Sumsub, Onfido)'
+                    ].map((item, idx) => (
+                      <div key={idx} className="flex items-start gap-2 group/item">
+                        <span className="mt-1 inline-block w-1.5 h-1.5 rounded-full transition-all duration-300 group-hover/item:scale-150" style={{ background: '#3b82f6', boxShadow: '0 0 8px rgba(59, 130, 246, 0.5)' }} />
+                        <span className="text-sm text-white/80 group-hover:text-white/95 transition-colors duration-300" style={{ fontFamily: 'var(--font-numans), sans-serif' }}>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {(activeTab === 'web3' ? web3Services : mobileServices).map((service, index) => {
               const isActive = index < 2; // Mark first 2 services as active
               
-              // Define marketing-style gradient backgrounds for each card
+              // Darker gradient backgrounds for each card
               const cardBackgrounds = [
-                'linear-gradient(135deg, rgba(255, 59, 48, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Red to dark
-                'linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Purple to dark
-                'linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Green to dark
-                'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Blue to dark
-                'linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Orange to dark
-                'linear-gradient(135deg, rgba(236, 72, 153, 0.1) 0%, rgba(20, 20, 20, 0.9) 50%, rgba(0, 0, 0, 0.95) 100%)', // Pink to dark
+                'linear-gradient(135deg, rgba(255, 59, 48, 0.05) 0%, rgba(10, 10, 10, 0.98) 50%, rgba(0, 0, 0, 1) 100%)', // Red to dark
+                'linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(10, 10, 10, 0.98) 50%, rgba(0, 0, 0, 1) 100%)', // Purple to dark
+                'linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(10, 10, 10, 0.98) 50%, rgba(0, 0, 0, 1) 100%)', // Green to dark
+                'linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(10, 10, 10, 0.98) 50%, rgba(0, 0, 0, 1) 100%)', // Blue to dark
+                'linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(10, 10, 10, 0.98) 50%, rgba(0, 0, 0, 1) 100%)', // Orange to dark
+                'linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(10, 10, 10, 0.98) 50%, rgba(0, 0, 0, 1) 100%)', // Pink to dark
               ];
               
               const hoverGradients = [
-                'linear-gradient(135deg, rgba(255, 59, 48, 0.2) 0%, rgba(255, 59, 48, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-                'linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-                'linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-                'linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-                'linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(245, 158, 11, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
-                'linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(236, 72, 153, 0.1) 50%, rgba(255, 255, 255, 0.05) 100%)',
+                'linear-gradient(135deg, rgba(255, 59, 48, 0.3) 0%, rgba(255, 59, 48, 0.15) 50%, rgba(255, 255, 255, 0.05) 100%)',
+                'linear-gradient(135deg, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0.15) 50%, rgba(255, 255, 255, 0.05) 100%)',
+                'linear-gradient(135deg, rgba(34, 197, 94, 0.3) 0%, rgba(34, 197, 94, 0.15) 50%, rgba(255, 255, 255, 0.05) 100%)',
+                'linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.15) 50%, rgba(255, 255, 255, 0.05) 100%)',
+                'linear-gradient(135deg, rgba(245, 158, 11, 0.3) 0%, rgba(245, 158, 11, 0.15) 50%, rgba(255, 255, 255, 0.05) 100%)',
+                'linear-gradient(135deg, rgba(236, 72, 153, 0.3) 0%, rgba(236, 72, 153, 0.15) 50%, rgba(255, 255, 255, 0.05) 100%)',
+              ];
+
+              const borderColors = [
+                'rgba(255, 59, 48, 0.3)',
+                'rgba(139, 92, 246, 0.3)',
+                'rgba(34, 197, 94, 0.3)',
+                'rgba(59, 130, 246, 0.3)',
+                'rgba(245, 158, 11, 0.3)',
+                'rgba(236, 72, 153, 0.3)',
               ];
               
               return (
                 <div
                   key={index}
-                  className="group relative rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer overflow-hidden"
+                  className="group relative rounded-2xl p-6 transition-all duration-500 hover:scale-[1.03] cursor-pointer overflow-hidden card-entrance"
                   style={{
                     background: cardBackgrounds[index % cardBackgrounds.length],
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    backdropFilter: 'blur(15px)',
+                    border: `1px solid ${borderColors[index % borderColors.length]}`,
+                    backdropFilter: 'blur(20px)',
                     minHeight: '300px',
-                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+                    animation: `cardSlideIn 0.6s ease-out ${index * 0.1}s both`,
+                    position: 'relative'
                   }}
                 >
-                  {/* Active Badge */}
+                  {/* Animated Border Glow */}
+                  <div 
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: `linear-gradient(135deg, ${borderColors[index % borderColors.length]}, transparent)`,
+                      filter: 'blur(20px)',
+                      zIndex: 0
+                    }}
+                  />
+                  
+                  {/* Pulsing Background Effect */}
+                  <div 
+                    className="absolute inset-0 rounded-2xl opacity-20 animate-pulse-slow"
+                    style={{
+                      background: hoverGradients[index % hoverGradients.length],
+                      animation: 'pulseGlow 3s ease-in-out infinite',
+                      zIndex: 0
+                    }}
+                  />
+                  
+                  {/* Active Badge with Animation */}
                   {isActive && (
                     <div 
-                      className="absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-semibold"
+                      className="absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-semibold animate-pulse-badge"
                       style={{
                         background: '#FF3B30',
                         color: 'white',
-                        fontFamily: 'var(--font-dm-sans), sans-serif'
+                        fontFamily: 'var(--font-dm-sans), sans-serif',
+                        boxShadow: '0 0 20px rgba(255, 59, 48, 0.5)',
+                        animation: 'pulseBadge 2s ease-in-out infinite',
+                        zIndex: 20
                       }}
                     >
                       ACTIVE
                     </div>
                   )}
                   
-                  {/* Hover Effects */}
+                  {/* Hover Gradient Overlay */}
                   <div 
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
                     style={{
-                      background: hoverGradients[index % hoverGradients.length]
+                      background: hoverGradients[index % hoverGradients.length],
+                      zIndex: 1
+                    }}
+                  />
+                  
+                  {/* Animated Shimmer Effect */}
+                  <div 
+                    className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-2xl"
+                    style={{
+                      background: 'linear-gradient(110deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%)',
+                      backgroundSize: '200% 100%',
+                      animation: 'shimmer 2s infinite',
+                      zIndex: 1
                     }}
                   />
                   
                   {/* Content */}
                   <div className="relative z-10 h-full flex flex-col">
-                    {/* Icon */}
+                    {/* Icon with Enhanced Animation */}
                     <div className="mb-4">
                       <div 
-                        className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+                        className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-500 group-hover:scale-125 group-hover:rotate-6"
                         style={{
-                          background: 'rgba(0, 0, 0, 0.3)',
-                          border: '2px solid rgba(255, 255, 255, 0.2)',
-                          backdropFilter: 'blur(10px)'
+                          background: 'rgba(0, 0, 0, 0.5)',
+                          border: `2px solid ${borderColors[index % borderColors.length]}`,
+                          backdropFilter: 'blur(10px)',
+                          boxShadow: `0 0 20px ${borderColors[index % borderColors.length]}40`,
+                          transition: 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)'
                         }}
                       >
                         {React.cloneElement(service.icon, { 
-                          className: "w-6 h-6 text-white group-hover:text-red-400 transition-colors duration-300" 
+                          className: "w-6 h-6 text-white group-hover:text-red-400 transition-all duration-500 group-hover:scale-110" 
                         })}
                       </div>
                     </div>
                     
-                    {/* Title */}
+                    {/* Title with Animation */}
                     <h3 
-                      className="text-xl lg:text-2xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-300 leading-tight"
+                      className="text-xl lg:text-2xl font-bold text-white mb-3 group-hover:text-white transition-all duration-300 leading-tight group-hover:translate-x-1"
                       style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}
                     >
                       {service.title}
@@ -420,23 +659,24 @@ export default function Service() {
                     
                     {/* Description */}
                     <p 
-                      className="text-white/80 group-hover:text-white/90 leading-relaxed mb-4 flex-1 text-base"
+                      className="text-white/80 group-hover:text-white/95 leading-relaxed mb-4 flex-1 text-base transition-colors duration-300"
                       style={{ fontFamily: 'var(--font-numans), sans-serif' }}
                     >
                       {service.description}
                     </p>
                     
-                    {/* Features */}
+                    {/* Features with Stagger Animation */}
                     <div className="flex flex-wrap gap-1.5 mt-auto">
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1.5 rounded-full text-sm font-medium text-white/70 group-hover:text-white transition-all duration-300"
+                          className="px-3 py-1.5 rounded-full text-sm font-medium text-white/70 group-hover:text-white transition-all duration-300 group-hover:scale-105"
                           style={{
-                            background: 'rgba(0, 0, 0, 0.3)',
-                            border: '1px solid rgba(255, 255, 255, 0.2)',
+                            background: 'rgba(0, 0, 0, 0.5)',
+                            border: `1px solid ${borderColors[index % borderColors.length]}60`,
                             backdropFilter: 'blur(10px)',
-                            fontFamily: 'var(--font-numans), sans-serif'
+                            fontFamily: 'var(--font-numans), sans-serif',
+                            animation: `fadeInUp 0.5s ease-out ${(index * 0.1) + (idx * 0.1)}s both`
                           }}
                         >
                           {feature}
@@ -446,7 +686,7 @@ export default function Service() {
                         <span
                           className="px-3 py-1.5 rounded-full text-sm font-medium text-white/50 transition-all duration-300"
                           style={{
-                            background: 'rgba(0, 0, 0, 0.2)',
+                            background: 'rgba(0, 0, 0, 0.3)',
                             border: '1px solid rgba(255, 255, 255, 0.1)',
                             backdropFilter: 'blur(10px)',
                             fontFamily: 'var(--font-numans), sans-serif'
@@ -511,71 +751,117 @@ export default function Service() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {caseStudies.map((study, index) => (
-              <div
-                key={index}
-                className="group relative rounded-2xl p-6 transition-all duration-300 hover:scale-105 cursor-pointer overflow-hidden"
-                style={{
-                  background: 'rgba(0, 0, 0, 0.4)',
-                  border: '2px solid rgba(255, 255, 255, 0.1)',
-                  backdropFilter: 'blur(10px)',
-                  minHeight: '320px'
-                }}
-              >
-                {/* Hover Effects */}
-                <div 
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
+            {caseStudies.map((study, index) => {
+              const caseStudyColors = [
+                { border: 'rgba(255, 59, 48, 0.3)', hover: 'rgba(255, 59, 48, 0.2)' },
+                { border: 'rgba(59, 130, 246, 0.3)', hover: 'rgba(59, 130, 246, 0.2)' },
+                { border: 'rgba(139, 92, 246, 0.3)', hover: 'rgba(139, 92, 246, 0.2)' },
+              ];
+              const colors = caseStudyColors[index % caseStudyColors.length];
+              
+              return (
+                <div
+                  key={index}
+                  className="group relative rounded-2xl p-6 transition-all duration-500 hover:scale-[1.03] cursor-pointer overflow-hidden"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(255, 59, 48, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)'
+                    background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.95) 100%)',
+                    border: `2px solid ${colors.border}`,
+                    backdropFilter: 'blur(20px)',
+                    minHeight: '320px',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+                    animation: `cardSlideIn 0.6s ease-out ${index * 0.15}s both`
                   }}
-                />
-                
-                {/* Content */}
-                <div className="relative z-10 h-full flex flex-col">
-                  {/* Category Badge */}
-                  <div className="mb-4">
-                    <span
-                      className="px-3 py-1 rounded-full text-xs font-semibold"
-                      style={{
-                        background: '#FF3B30',
-                        color: 'white',
-                        fontFamily: 'var(--font-dm-sans), sans-serif'
-                      }}
-                    >
-                      {study.category}
-                    </span>
-                  </div>
+                >
+                  {/* Animated Border Glow */}
+                  <div 
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{
+                      background: `linear-gradient(135deg, ${colors.border}, transparent)`,
+                      filter: 'blur(20px)',
+                      zIndex: 0
+                    }}
+                  />
                   
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-300 leading-tight" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
-                    {study.title}
-                  </h3>
+                  {/* Pulsing Background Effect */}
+                  <div 
+                    className="absolute inset-0 rounded-2xl opacity-20"
+                    style={{
+                      background: `linear-gradient(135deg, ${colors.hover} 0%, rgba(255, 255, 255, 0.05) 100%)`,
+                      animation: 'pulseGlow 3s ease-in-out infinite',
+                      zIndex: 0
+                    }}
+                  />
                   
-                  {/* Description */}
-                  <p className="text-white/80 group-hover:text-white/90 leading-relaxed mb-4 flex-1 text-base" style={{ fontFamily: 'var(--font-numans), sans-serif' }}>
-                    {study.description}
-                  </p>
+                  {/* Hover Gradient Overlay */}
+                  <div 
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"
+                    style={{
+                      background: `linear-gradient(135deg, ${colors.hover} 0%, rgba(255, 255, 255, 0.05) 100%)`,
+                      zIndex: 1
+                    }}
+                  />
                   
-                  {/* Metrics */}
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    {study.metrics.map((metric, idx) => (
+                  {/* Animated Shimmer Effect */}
+                  <div 
+                    className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-2xl"
+                    style={{
+                      background: 'linear-gradient(110deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%)',
+                      backgroundSize: '200% 100%',
+                      animation: 'shimmer 2s infinite',
+                      zIndex: 1
+                    }}
+                  />
+                  
+                  {/* Content */}
+                  <div className="relative z-10 h-full flex flex-col">
+                    {/* Category Badge with Animation */}
+                    <div className="mb-4">
                       <span
-                        key={idx}
-                        className="px-3 py-1.5 rounded-full text-sm font-medium text-white/70 group-hover:text-white transition-all duration-300"
+                        className="px-3 py-1 rounded-full text-xs font-semibold transition-all duration-300 group-hover:scale-110"
                         style={{
-                          background: 'rgba(0, 0, 0, 0.3)',
-                          border: '1px solid rgba(255, 255, 255, 0.2)',
-                          backdropFilter: 'blur(10px)',
-                          fontFamily: 'var(--font-numans), sans-serif'
+                          background: '#FF3B30',
+                          color: 'white',
+                          fontFamily: 'var(--font-dm-sans), sans-serif',
+                          boxShadow: '0 0 15px rgba(255, 59, 48, 0.4)',
+                          display: 'inline-block'
                         }}
                       >
-                        {metric}
+                        {study.category}
                       </span>
-                    ))}
+                    </div>
+                    
+                    {/* Title with Animation */}
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-all duration-300 leading-tight group-hover:translate-x-1" style={{ fontFamily: 'var(--font-dm-sans), sans-serif' }}>
+                      {study.title}
+                    </h3>
+                    
+                    {/* Description */}
+                    <p className="text-white/80 group-hover:text-white/95 leading-relaxed mb-4 flex-1 text-base transition-colors duration-300" style={{ fontFamily: 'var(--font-numans), sans-serif' }}>
+                      {study.description}
+                    </p>
+                    
+                    {/* Metrics with Stagger Animation */}
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                      {study.metrics.map((metric, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1.5 rounded-full text-sm font-medium text-white/70 group-hover:text-white transition-all duration-300 group-hover:scale-105"
+                          style={{
+                            background: 'rgba(0, 0, 0, 0.5)',
+                            border: `1px solid ${colors.border}60`,
+                            backdropFilter: 'blur(10px)',
+                            fontFamily: 'var(--font-numans), sans-serif',
+                            animation: `fadeInUp 0.5s ease-out ${(index * 0.15) + (idx * 0.1)}s both`
+                          }}
+                        >
+                          {metric}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -677,6 +963,57 @@ export default function Service() {
           to { 
             opacity: 1; 
             transform: translateY(0); 
+          }
+        }
+        
+        @keyframes cardSlideIn {
+          from {
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+        
+        @keyframes pulseGlow {
+          0%, 100% {
+            opacity: 0.15;
+          }
+          50% {
+            opacity: 0.25;
+          }
+        }
+        
+        @keyframes pulseBadge {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(255, 59, 48, 0.5);
+            transform: scale(1);
+          }
+          50% {
+            box-shadow: 0 0 30px rgba(255, 59, 48, 0.8);
+            transform: scale(1.05);
+          }
+        }
+        
+        @keyframes shimmer {
+          0% {
+            background-position: -200% 0;
+          }
+          100% {
+            background-position: 200% 0;
+          }
+        }
+        
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
           }
         }
         
