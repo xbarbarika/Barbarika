@@ -171,7 +171,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
                       </Link>
                       <Link href="/services-file/web3-and-mobile">
                         <div className="flex items-center justify-between px-5 py-2 hover:bg-gray-100 cursor-pointer text-sm text-gray-900">
-                          <span>Web3 & Mobile</span>
+                          <span>Web3</span>
                         </div>
                       </Link>
                       <Link href="/services-file/genai">
@@ -341,7 +341,7 @@ const Navbar: React.FC<NavbarProps> = ({ onMenuClick }) => {
                     Blockchain
                   </Link>
                   <Link href="/services-file/web3-and-mobile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">
-                    Web3 & Mobile
+                    Web3
                   </Link>
                   <Link href="/services-file/genai" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">
                     AI
@@ -442,7 +442,7 @@ export const ServiceNavBar = () => (
     <nav className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl shadow-lg px-6 py-3 flex gap-4 md:gap-8 max-w-2xl w-full items-center justify-center">
       <Link href="/marketing" className="text-white/80 hover:text-pink-400 font-semibold transition-colors">Marketing</Link>
       <Link href="/services-file/blockchain" className="text-white/80 hover:text-pink-400 font-semibold transition-colors">Blockchain</Link>
-      <Link href="/services-file/web3-and-mobile" className="text-white/80 hover:text-pink-400 font-semibold transition-colors">Web3 & Mobile</Link>
+      <Link href="/services-file/web3-and-mobile" className="text-white/80 hover:text-pink-400 font-semibold transition-colors">Web3</Link>
       <Link href="/services-file/genai" className="text-white/80 hover:text-pink-400 font-semibold transition-colors">GenAI</Link>
     </nav>
   </div>
